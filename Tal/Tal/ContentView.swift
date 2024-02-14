@@ -10,11 +10,14 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)], animation: .default)
     private var items: FetchedResults<Item>
+
+    // Screenshot Manager
+    private var screenshotManager = ScreenshotManager()
+
+    // State to control screenshot taking
+    @State private var isTakingScreenshots = false
 
     var body: some View {
         NavigationView {
@@ -29,15 +32,33 @@ struct ContentView: View {
                 .onDelete(perform: deleteItems)
             }
             .toolbar {
-                ToolbarItem {
-                    Button(action: addItem) {
+                ToolbarItem(placement: .automatic) {
+                    Button(action: log) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
+                ToolbarItem(placement: .principal) {
+                    Button(action: toggleScreenshotTaking) {
+                        Text(isTakingScreenshots ? "Stop Screenshots" : "Start Screenshots")
+                    }
+                }
+
             }
+
             Text("Select an item")
         }
     }
+    private func toggleScreenshotTaking() {
+        if isTakingScreenshots {
+            // Stop taking screenshots
+            screenshotManager.stopTakingScreenshots()
+        } else {
+            // Start taking screenshots
+            screenshotManager.startTakingScreenshots()
+        }
+        isTakingScreenshots.toggle()
+    }
+
 
     private func addItem() {
         withAnimation {
@@ -54,6 +75,20 @@ struct ContentView: View {
             }
         }
     }
+    
+    
+    private func log(){
+        for item in items{
+            if let timestamp = item.timestamp {
+                print("Item timestamp: \(timestamp)")
+            } else {
+                print("Item has no timestamp")
+            }
+        }
+        
+    }
+    
+
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
@@ -70,6 +105,7 @@ struct ContentView: View {
         }
     }
 }
+
 
 private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()

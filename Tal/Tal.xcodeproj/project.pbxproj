@@ -16,6 +16,7 @@
 		98EA4F1C2B7C489B00C83C8B /* TalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F1B2B7C489B00C83C8B /* TalTests.swift */; };
 		98EA4F262B7C489B00C83C8B /* TalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F252B7C489B00C83C8B /* TalUITests.swift */; };
 		98EA4F282B7C489B00C83C8B /* TalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F272B7C489B00C83C8B /* TalUITestsLaunchTests.swift */; };
+		98F3BFCC2B7C5429007572DF /* ScreenshotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BFCB2B7C5429007572DF /* ScreenshotManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		98EA4F212B7C489B00C83C8B /* TalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98EA4F252B7C489B00C83C8B /* TalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalUITests.swift; sourceTree = "<group>"; };
 		98EA4F272B7C489B00C83C8B /* TalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		98F3BFCB2B7C5429007572DF /* ScreenshotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				98EA4F122B7C489A00C83C8B /* Tal.entitlements */,
 				98EA4F0F2B7C489A00C83C8B /* Tal.xcdatamodeld */,
 				98EA4F0A2B7C489A00C83C8B /* Preview Content */,
+				98F3BFCB2B7C5429007572DF /* ScreenshotManager.swift */,
 			);
 			path = Tal;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98EA4F0E2B7C489A00C83C8B /* Persistence.swift in Sources */,
+				98F3BFCC2B7C5429007572DF /* ScreenshotManager.swift in Sources */,
 				98EA4F112B7C489A00C83C8B /* Tal.xcdatamodeld in Sources */,
 				98EA4F072B7C489700C83C8B /* ContentView.swift in Sources */,
 				98EA4F052B7C489700C83C8B /* TalApp.swift in Sources */,
