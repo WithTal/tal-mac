@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98EA4F052B7C489700C83C8B /* TalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F042B7C489700C83C8B /* TalApp.swift */; };
+		98EA4F072B7C489700C83C8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F062B7C489700C83C8B /* ContentView.swift */; };
+		98EA4F092B7C489A00C83C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EA4F082B7C489A00C83C8B /* Assets.xcassets */; };
+		98EA4F0C2B7C489A00C83C8B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EA4F0B2B7C489A00C83C8B /* Preview Assets.xcassets */; };
+		98EA4F0E2B7C489A00C83C8B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F0D2B7C489A00C83C8B /* Persistence.swift */; };
+		98EA4F112B7C489A00C83C8B /* Tal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F0F2B7C489A00C83C8B /* Tal.xcdatamodeld */; };
+		98EA4F1C2B7C489B00C83C8B /* TalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F1B2B7C489B00C83C8B /* TalTests.swift */; };
+		98EA4F262B7C489B00C83C8B /* TalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F252B7C489B00C83C8B /* TalUITests.swift */; };
+		98EA4F282B7C489B00C83C8B /* TalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F272B7C489B00C83C8B /* TalUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		98EA4F182B7C489B00C83C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98EA4EF92B7C489700C83C8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98EA4F002B7C489700C83C8B;
+			remoteInfo = Tal;
+		};
+		98EA4F222B7C489B00C83C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98EA4EF92B7C489700C83C8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98EA4F002B7C489700C83C8B;
+			remoteInfo = Tal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		98EA4F012B7C489700C83C8B /* Tal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98EA4F042B7C489700C83C8B /* TalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalApp.swift; sourceTree = "<group>"; };
+		98EA4F062B7C489700C83C8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		98EA4F082B7C489A00C83C8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98EA4F0B2B7C489A00C83C8B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		98EA4F0D2B7C489A00C83C8B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		98EA4F102B7C489A00C83C8B /* Tal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tal.xcdatamodel; sourceTree = "<group>"; };
+		98EA4F122B7C489A00C83C8B /* Tal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tal.entitlements; sourceTree = "<group>"; };
+		98EA4F172B7C489B00C83C8B /* TalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98EA4F1B2B7C489B00C83C8B /* TalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalTests.swift; sourceTree = "<group>"; };
+		98EA4F212B7C489B00C83C8B /* TalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98EA4F252B7C489B00C83C8B /* TalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalUITests.swift; sourceTree = "<group>"; };
+		98EA4F272B7C489B00C83C8B /* TalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		98EA4EFE2B7C489700C83C8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98EA4F142B7C489B00C83C8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98EA4F1E2B7C489B00C83C8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		98EA4EF82B7C489700C83C8B = {
+			isa = PBXGroup;
+			children = (
+				98EA4F032B7C489700C83C8B /* Tal */,
+				98EA4F1A2B7C489B00C83C8B /* TalTests */,
+				98EA4F242B7C489B00C83C8B /* TalUITests */,
+				98EA4F022B7C489700C83C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		98EA4F022B7C489700C83C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98EA4F012B7C489700C83C8B /* Tal.app */,
+				98EA4F172B7C489B00C83C8B /* TalTests.xctest */,
+				98EA4F212B7C489B00C83C8B /* TalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98EA4F032B7C489700C83C8B /* Tal */ = {
+			isa = PBXGroup;
+			children = (
+				98EA4F042B7C489700C83C8B /* TalApp.swift */,
+				98EA4F062B7C489700C83C8B /* ContentView.swift */,
+				98EA4F082B7C489A00C83C8B /* Assets.xcassets */,
+				98EA4F0D2B7C489A00C83C8B /* Persistence.swift */,
+				98EA4F122B7C489A00C83C8B /* Tal.entitlements */,
+				98EA4F0F2B7C489A00C83C8B /* Tal.xcdatamodeld */,
+				98EA4F0A2B7C489A00C83C8B /* Preview Content */,
+			);
+			path = Tal;
+			sourceTree = "<group>";
+		};
+		98EA4F0A2B7C489A00C83C8B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				98EA4F0B2B7C489A00C83C8B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		98EA4F1A2B7C489B00C83C8B /* TalTests */ = {
+			isa = PBXGroup;
+			children = (
+				98EA4F1B2B7C489B00C83C8B /* TalTests.swift */,
+			);
+			path = TalTests;
+			sourceTree = "<group>";
+		};
+		98EA4F242B7C489B00C83C8B /* TalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				98EA4F252B7C489B00C83C8B /* TalUITests.swift */,
+				98EA4F272B7C489B00C83C8B /* TalUITestsLaunchTests.swift */,
+			);
+			path = TalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98EA4F002B7C489700C83C8B /* Tal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98EA4F2B2B7C489B00C83C8B /* Build configuration list for PBXNativeTarget "Tal" */;
+			buildPhases = (
+				98EA4EFD2B7C489700C83C8B /* Sources */,
+				98EA4EFE2B7C489700C83C8B /* Frameworks */,
+				98EA4EFF2B7C489700C83C8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tal;
+			productName = Tal;
+			productReference = 98EA4F012B7C489700C83C8B /* Tal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		98EA4F162B7C489B00C83C8B /* TalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98EA4F2E2B7C489B00C83C8B /* Build configuration list for PBXNativeTarget "TalTests" */;
+			buildPhases = (
+				98EA4F132B7C489B00C83C8B /* Sources */,
+				98EA4F142B7C489B00C83C8B /* Frameworks */,
+				98EA4F152B7C489B00C83C8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98EA4F192B7C489B00C83C8B /* PBXTargetDependency */,
+			);
+			name = TalTests;
+			productName = TalTests;
+			productReference = 98EA4F172B7C489B00C83C8B /* TalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		98EA4F202B7C489B00C83C8B /* TalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98EA4F312B7C489B00C83C8B /* Build configuration list for PBXNativeTarget "TalUITests" */;
+			buildPhases = (
+				98EA4F1D2B7C489B00C83C8B /* Sources */,
+				98EA4F1E2B7C489B00C83C8B /* Frameworks */,
+				98EA4F1F2B7C489B00C83C8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98EA4F232B7C489B00C83C8B /* PBXTargetDependency */,
+			);
+			name = TalUITests;
+			productName = TalUITests;
+			productReference = 98EA4F212B7C489B00C83C8B /* TalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98EA4EF92B7C489700C83C8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					98EA4F002B7C489700C83C8B = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					98EA4F162B7C489B00C83C8B = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 98EA4F002B7C489700C83C8B;
+					};
+					98EA4F202B7C489B00C83C8B = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 98EA4F002B7C489700C83C8B;
+					};
+				};
+			};
+			buildConfigurationList = 98EA4EFC2B7C489700C83C8B /* Build configuration list for PBXProject "Tal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 98EA4EF82B7C489700C83C8B;
+			productRefGroup = 98EA4F022B7C489700C83C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98EA4F002B7C489700C83C8B /* Tal */,
+				98EA4F162B7C489B00C83C8B /* TalTests */,
+				98EA4F202B7C489B00C83C8B /* TalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		98EA4EFF2B7C489700C83C8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98EA4F0C2B7C489A00C83C8B /* Preview Assets.xcassets in Resources */,
+				98EA4F092B7C489A00C83C8B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98EA4F152B7C489B00C83C8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98EA4F1F2B7C489B00C83C8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98EA4EFD2B7C489700C83C8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98EA4F0E2B7C489A00C83C8B /* Persistence.swift in Sources */,
+				98EA4F112B7C489A00C83C8B /* Tal.xcdatamodeld in Sources */,
+				98EA4F072B7C489700C83C8B /* ContentView.swift in Sources */,
+				98EA4F052B7C489700C83C8B /* TalApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98EA4F132B7C489B00C83C8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98EA4F1C2B7C489B00C83C8B /* TalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98EA4F1D2B7C489B00C83C8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98EA4F282B7C489B00C83C8B /* TalUITestsLaunchTests.swift in Sources */,
+				98EA4F262B7C489B00C83C8B /* TalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		98EA4F192B7C489B00C83C8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98EA4F002B7C489700C83C8B /* Tal */;
+			targetProxy = 98EA4F182B7C489B00C83C8B /* PBXContainerItemProxy */;
+		};
+		98EA4F232B7C489B00C83C8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98EA4F002B7C489700C83C8B /* Tal */;
+			targetProxy = 98EA4F222B7C489B00C83C8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		98EA4F292B7C489B00C83C8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		98EA4F2A2B7C489B00C83C8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		98EA4F2C2B7C489B00C83C8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tal/Tal.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Tal/Preview Content\"";
+				DEVELOPMENT_TEAM = 7G7ATN48NM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pablo.Tal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		98EA4F2D2B7C489B00C83C8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Tal/Tal.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Tal/Preview Content\"";
+				DEVELOPMENT_TEAM = 7G7ATN48NM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pablo.Tal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		98EA4F2F2B7C489B00C83C8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G7ATN48NM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pablo.TalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tal";
+			};
+			name = Debug;
+		};
+		98EA4F302B7C489B00C83C8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G7ATN48NM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pablo.TalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tal";
+			};
+			name = Release;
+		};
+		98EA4F322B7C489B00C83C8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G7ATN48NM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pablo.TalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Tal;
+			};
+			name = Debug;
+		};
+		98EA4F332B7C489B00C83C8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G7ATN48NM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pablo.TalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Tal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		98EA4EFC2B7C489700C83C8B /* Build configuration list for PBXProject "Tal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98EA4F292B7C489B00C83C8B /* Debug */,
+				98EA4F2A2B7C489B00C83C8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98EA4F2B2B7C489B00C83C8B /* Build configuration list for PBXNativeTarget "Tal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98EA4F2C2B7C489B00C83C8B /* Debug */,
+				98EA4F2D2B7C489B00C83C8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98EA4F2E2B7C489B00C83C8B /* Build configuration list for PBXNativeTarget "TalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98EA4F2F2B7C489B00C83C8B /* Debug */,
+				98EA4F302B7C489B00C83C8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98EA4F312B7C489B00C83C8B /* Build configuration list for PBXNativeTarget "TalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98EA4F322B7C489B00C83C8B /* Debug */,
+				98EA4F332B7C489B00C83C8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		98EA4F0F2B7C489A00C83C8B /* Tal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				98EA4F102B7C489A00C83C8B /* Tal.xcdatamodel */,
+			);
+			currentVersion = 98EA4F102B7C489A00C83C8B /* Tal.xcdatamodel */;
+			path = Tal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 98EA4EF92B7C489700C83C8B /* Project object */;
+}
