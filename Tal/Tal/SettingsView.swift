@@ -125,16 +125,6 @@ struct AccountSettingsView: View {
     }
 }
 
-struct FilledButtonStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-    }
-}
-
 
 
 
@@ -238,20 +228,7 @@ struct StorageSettingsView: View {
     }
 }
 
-
-
-
-struct KeyView: View {
-    let key: String
-
-    var body: some View {
-        Text(key)
-            .padding(.horizontal)
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(5)
-    }
-}
-
+c
 
 
 struct SettingsView: View {
