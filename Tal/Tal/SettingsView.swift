@@ -228,8 +228,6 @@ struct StorageSettingsView: View {
     }
 }
 
-c
-
 
 struct SettingsView: View {
     private enum Tabs: Hashable {

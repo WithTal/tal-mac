@@ -8,12 +8,16 @@
 import Foundation
 import UniformTypeIdentifiers
 
+import Foundation
+import UniformTypeIdentifiers
+import Vision
 import Cocoa
 import CoreGraphics
 
 class ScreenshotManager {
     var timer: Timer?
     var isRunning = false
+    var ocrQueue = DispatchQueue(label: "com.yourapp.ocrQueue")
 
     func startTakingScreenshots() {
         guard !isRunning else { return }
@@ -40,6 +44,10 @@ class ScreenshotManager {
         let screenFrame = CGDisplayBounds(displayID)
         guard let image = CGWindowListCreateImage(screenFrame, .optionOnScreenOnly, kCGNullWindowID, .bestResolution) else { return }
 
+       // Perform OCR on the captured image
+       ocrQueue.async { [weak self] in
+           self?.performOCR(on: image)
+       }
         guard let destinationUrl = getDestinationUrl() else { return }
         guard let destination = CGImageDestinationCreateWithURL(destinationUrl as CFURL, UTType.png.identifier as CFString, 1, nil) else { return }
         CGImageDestinationAddImage(destination, image, nil)
@@ -48,6 +56,35 @@ class ScreenshotManager {
         // Log the file path
         print("Screenshot saved to: \(destinationUrl.path)")
     }
+//    zzzzzzzzzzzzz
+    
+    
+    private func performOCR(on image: CGImage) {
+           let request = VNRecognizeTextRequest { request, error in
+               guard let observations = request.results as? [VNRecognizedTextObservation], error == nil else {
+                   print("OCR error: \(error?.localizedDescription ?? "Unknown error")")
+                   return
+               }
+
+               let recognizedStrings = observations.compactMap { observation in
+                   observation.topCandidates(1).first?.string
+               }.joined(separator: "\n")
+
+               // Handle the recognized text as needed
+               print("Recognized text: \(recognizedStrings)")
+               // You can save this text, log it, or perform any other operation here
+           }
+
+           // Configure the request as needed, e.g., for fast or accurate recognition
+           request.recognitionLevel = .accurate
+
+           let requestHandler = VNImageRequestHandler(cgImage: image, options: [:])
+           do {
+               try requestHandler.perform([request])
+           } catch {
+               print("Failed to perform OCR: \(error.localizedDescription)")
+           }
+       }
 
 
     private func getDestinationUrl() -> URL? {
