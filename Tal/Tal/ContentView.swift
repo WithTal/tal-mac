@@ -44,6 +44,17 @@ struct ContentView: View {
                 }
 
             }
+            TabView {
+                StoryView()
+                    .tabItem {
+                        Label("Home", systemImage: "person")
+                    }
+                StoryView()
+                    .tabItem {
+                        Label("Home", systemImage: "person")
+                    }
+                
+            }
 
             Text("Select an item")
         }

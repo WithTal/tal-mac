@@ -7,14 +7,30 @@
 
 import SwiftUI
 
+//@main
+//struct TalApp: App {
+//    let persistenceController = PersistenceController.shared
+//
+//    var body: some Scene {
+//        WindowGroup {
+//            ContentView()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+//        }
+//    }
+//}
+
 @main
 struct TalApp: App {
-    let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
+
+        Settings {
+            SettingsView()
+        }
+        
     }
 }
+
+
