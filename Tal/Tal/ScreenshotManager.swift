@@ -22,11 +22,8 @@ class ScreenshotManager {
     func startTakingScreenshots() {
         guard !isRunning else { return }
 
-        // Request screen recording permission here if not already granted
-        // Note: macOS requires explicit permission from the user to record the screen
-
         // Set up a timer to take a screenshot every 10 seconds
-        timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { [weak self] _ in
             self?.takeScreenshot()
         }
         isRunning = true

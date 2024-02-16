@@ -46,8 +46,6 @@ struct StorageSettingsView: View {
             
             Spacer() // Use spacer to push content to the top
         }
-        .padding()
-        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 

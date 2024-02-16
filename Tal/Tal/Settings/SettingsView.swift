@@ -23,24 +23,30 @@ struct SettingsView: View {
                 }
                 .font(.headline)
                 .tag(Tabs.general)
-                .padding(.horizontal)
+                .padding(20)
+                .background(Color.black)
             PrivacySettingsView()
                 .tabItem {
                     Label("Screen", systemImage: "desktopcomputer")
                 }
                 .tag(Tabs.advanced)
+                .padding(20)
+                .background(Color.black)
             StorageSettingsView()
                 .tabItem {
                     Label("Storage", systemImage: "opticaldiscdrive")
                 }
                 .tag(Tabs.advanced)
+                .padding(20)
+                .background(Color.black)
             ShortcutsSettingsView()
                 .tabItem {
                     Label("Shortcuts", systemImage: "keyboard")
                 }
                 .tag(Tabs.advanced)
+                .padding(20)
+                .background(Color.black)
         }
-        .padding(20)
         
     }
 }

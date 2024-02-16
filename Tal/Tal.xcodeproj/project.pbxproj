@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98B87EA92B7F18C5003B7B34 /* Vistante+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B87EA72B7F18C5003B7B34 /* Vistante+CoreDataClass.swift */; };
+		98B87EAA2B7F18C5003B7B34 /* Vistante+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B87EA82B7F18C5003B7B34 /* Vistante+CoreDataProperties.swift */; };
+		98B87EAB2B7F19FB003B7B34 /* Tal.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 98EA4F0F2B7C489A00C83C8B /* Tal.xcdatamodeld */; };
+		98BA64592B7F0CA200A1CB10 /* ConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA64582B7F0CA200A1CB10 /* ConsumptionView.swift */; };
 		98EA4F052B7C489700C83C8B /* TalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F042B7C489700C83C8B /* TalApp.swift */; };
 		98EA4F072B7C489700C83C8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F062B7C489700C83C8B /* ContentView.swift */; };
 		98EA4F092B7C489A00C83C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EA4F082B7C489A00C83C8B /* Assets.xcassets */; };
 		98EA4F0C2B7C489A00C83C8B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EA4F0B2B7C489A00C83C8B /* Preview Assets.xcassets */; };
 		98EA4F0E2B7C489A00C83C8B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F0D2B7C489A00C83C8B /* Persistence.swift */; };
-		98EA4F112B7C489A00C83C8B /* Tal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F0F2B7C489A00C83C8B /* Tal.xcdatamodeld */; };
 		98EA4F1C2B7C489B00C83C8B /* TalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F1B2B7C489B00C83C8B /* TalTests.swift */; };
 		98EA4F262B7C489B00C83C8B /* TalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F252B7C489B00C83C8B /* TalUITests.swift */; };
 		98EA4F282B7C489B00C83C8B /* TalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F272B7C489B00C83C8B /* TalUITestsLaunchTests.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		98B87EA72B7F18C5003B7B34 /* Vistante+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vistante+CoreDataClass.swift"; sourceTree = "<group>"; };
+		98B87EA82B7F18C5003B7B34 /* Vistante+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vistante+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		98BA64582B7F0CA200A1CB10 /* ConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionView.swift; sourceTree = "<group>"; };
 		98EA4F012B7C489700C83C8B /* Tal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98EA4F042B7C489700C83C8B /* TalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalApp.swift; sourceTree = "<group>"; };
 		98EA4F062B7C489700C83C8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 		98EA4EF82B7C489700C83C8B = {
 			isa = PBXGroup;
 			children = (
+				98B87EA72B7F18C5003B7B34 /* Vistante+CoreDataClass.swift */,
+				98B87EA82B7F18C5003B7B34 /* Vistante+CoreDataProperties.swift */,
 				98EA4F032B7C489700C83C8B /* Tal */,
 				98EA4F1A2B7C489B00C83C8B /* TalTests */,
 				98EA4F242B7C489B00C83C8B /* TalUITests */,
@@ -128,6 +136,7 @@
 				98F3BFCB2B7C5429007572DF /* ScreenshotManager.swift */,
 				98F3BFD82B7F01EF007572DF /* AppTracking.swift */,
 				98F3BFDD2B7F03CA007572DF /* UI.swift */,
+				98BA64582B7F0CA200A1CB10 /* ConsumptionView.swift */,
 			);
 			path = Tal;
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98B87EAB2B7F19FB003B7B34 /* Tal.xcdatamodeld in Resources */,
 				98EA4F0C2B7C489A00C83C8B /* Preview Assets.xcassets in Resources */,
 				98EA4F092B7C489A00C83C8B /* Assets.xcassets in Resources */,
 			);
@@ -307,14 +317,16 @@
 			files = (
 				98EA4F0E2B7C489A00C83C8B /* Persistence.swift in Sources */,
 				98F3BFE22B7F047F007572DF /* ShortcutSettings.swift in Sources */,
+				98B87EAA2B7F18C5003B7B34 /* Vistante+CoreDataProperties.swift in Sources */,
 				98F3BFE42B7F04B0007572DF /* AccountSettings.swift in Sources */,
 				98F3BFD22B7EE33D007572DF /* SettingsView.swift in Sources */,
 				98F3BFE02B7F0470007572DF /* StorageSettings.swift in Sources */,
 				98F3BFDE2B7F03CA007572DF /* UI.swift in Sources */,
 				98F3BFD92B7F01EF007572DF /* AppTracking.swift in Sources */,
+				98B87EA92B7F18C5003B7B34 /* Vistante+CoreDataClass.swift in Sources */,
 				98F3BFCC2B7C5429007572DF /* ScreenshotManager.swift in Sources */,
-				98EA4F112B7C489A00C83C8B /* Tal.xcdatamodeld in Sources */,
 				98EA4F072B7C489700C83C8B /* ContentView.swift in Sources */,
+				98BA64592B7F0CA200A1CB10 /* ConsumptionView.swift in Sources */,
 				98EA4F052B7C489700C83C8B /* TalApp.swift in Sources */,
 				98F3BFDC2B7F0371007572DF /* PrivacySettings.swift in Sources */,
 			);

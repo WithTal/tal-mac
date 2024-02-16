@@ -15,4 +15,5 @@ extension Font {
 
 extension Color {
     static let primaryText = Color.primary
+    static let background = Color.black
 }

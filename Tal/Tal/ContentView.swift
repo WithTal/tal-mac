@@ -10,10 +10,11 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)], animation: .default)
-    private var items: FetchedResults<Item>
+//    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)], animation: .default)
+//    private var items: FetchedResults<Item>
 
     // Screenshot Manager
+    
     private var appMonitor = ApplicationMonitor() // Add this line
 
     private var screenshotManager = ScreenshotManager()
@@ -26,8 +27,10 @@ struct ContentView: View {
             Button(action: toggleScreenshotTaking) {
                 Text(isTakingScreenshots ? "Stop Screenshots" : "Start Screenshots")
             }
+            BarChart()
         }
     }
+    
     private func toggleScreenshotTaking() {
         if isTakingScreenshots {
             // Stop taking screenshots
@@ -40,13 +43,5 @@ struct ContentView: View {
     }
  
     
-    private func log(){
-        for item in items{
-            if let timestamp = item.timestamp {
-                print("Item timestamp: \(timestamp)")
-            } else {
-                print("Item has no timestamp")
-            }
-        }
-    }
+    
 }
