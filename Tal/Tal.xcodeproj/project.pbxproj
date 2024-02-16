@@ -19,6 +19,7 @@
 		98F3BFCC2B7C5429007572DF /* ScreenshotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BFCB2B7C5429007572DF /* ScreenshotManager.swift */; };
 		98F3BFD22B7EE33D007572DF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BFD12B7EE33D007572DF /* SettingsView.swift */; };
 		98F3BFD52B7EF53E007572DF /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 98F3BFD42B7EF53E007572DF /* KeyboardShortcuts */; };
+		98F3BFD92B7F01EF007572DF /* AppTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BFD82B7F01EF007572DF /* AppTracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		98EA4F272B7C489B00C83C8B /* TalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		98F3BFCB2B7C5429007572DF /* ScreenshotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotManager.swift; sourceTree = "<group>"; };
 		98F3BFD12B7EE33D007572DF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		98F3BFD82B7F01EF007572DF /* AppTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTracking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				98EA4F0A2B7C489A00C83C8B /* Preview Content */,
 				98F3BFCB2B7C5429007572DF /* ScreenshotManager.swift */,
 				98F3BFD12B7EE33D007572DF /* SettingsView.swift */,
+				98F3BFD82B7F01EF007572DF /* AppTracking.swift */,
 			);
 			path = Tal;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				98EA4F0E2B7C489A00C83C8B /* Persistence.swift in Sources */,
 				98F3BFD22B7EE33D007572DF /* SettingsView.swift in Sources */,
+				98F3BFD92B7F01EF007572DF /* AppTracking.swift in Sources */,
 				98F3BFCC2B7C5429007572DF /* ScreenshotManager.swift in Sources */,
 				98EA4F112B7C489A00C83C8B /* Tal.xcdatamodeld in Sources */,
 				98EA4F072B7C489700C83C8B /* ContentView.swift in Sources */,

@@ -14,6 +14,8 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 
     // Screenshot Manager
+    private var appMonitor = ApplicationMonitor() // Add this line
+
     private var screenshotManager = ScreenshotManager()
 
     // State to control screenshot taking
@@ -36,8 +38,6 @@ struct ContentView: View {
         }
         isTakingScreenshots.toggle()
     }
-
-
  
     
     private func log(){
@@ -48,7 +48,5 @@ struct ContentView: View {
                 print("Item has no timestamp")
             }
         }
-        
     }
-
 }
