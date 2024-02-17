@@ -18,6 +18,7 @@ struct TalApp: App {
         }
         Settings {
             SettingsView()
+            
         }
     }
 }

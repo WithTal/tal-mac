@@ -7,6 +7,7 @@
         <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Vistante" representedClassName=".Vistante" syncable="YES" codeGenerationType="class">
+        <attribute name="bundleId" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="type" optional="YES" attributeType="String"/>
         <attribute name="visitype" optional="YES" attributeType="String"/>

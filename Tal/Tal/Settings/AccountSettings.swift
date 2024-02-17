@@ -36,6 +36,11 @@ struct AccountSettingsView: View {
                 .buttonStyle(.bordered)
             }
             Divider()
+            HStack {
+                Text("You have 5 friends on call-")
+                Button("Modify...", action: learnMore)
+            }
+            Divider()
             Text("Account").bold()
             Toggle("Open Tal at login", isOn: $openAtLogin)
             Toggle("Remind me when Tal is paused", isOn: $remindWhenPaused)

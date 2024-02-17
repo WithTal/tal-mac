@@ -10,6 +10,8 @@
 		98B87EA92B7F18C5003B7B34 /* Vistante+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B87EA72B7F18C5003B7B34 /* Vistante+CoreDataClass.swift */; };
 		98B87EAA2B7F18C5003B7B34 /* Vistante+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B87EA82B7F18C5003B7B34 /* Vistante+CoreDataProperties.swift */; };
 		98B87EAB2B7F19FB003B7B34 /* Tal.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 98EA4F0F2B7C489A00C83C8B /* Tal.xcdatamodeld */; };
+		98B87EAD2B7F2E6B003B7B34 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B87EAC2B7F2E6B003B7B34 /* Data.swift */; };
+		98B87EAF2B80316A003B7B34 /* VisitanteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B87EAE2B80316A003B7B34 /* VisitanteView.swift */; };
 		98BA64592B7F0CA200A1CB10 /* ConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA64582B7F0CA200A1CB10 /* ConsumptionView.swift */; };
 		98EA4F052B7C489700C83C8B /* TalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F042B7C489700C83C8B /* TalApp.swift */; };
 		98EA4F072B7C489700C83C8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F062B7C489700C83C8B /* ContentView.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		98B87EA72B7F18C5003B7B34 /* Vistante+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vistante+CoreDataClass.swift"; sourceTree = "<group>"; };
 		98B87EA82B7F18C5003B7B34 /* Vistante+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vistante+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		98B87EAC2B7F2E6B003B7B34 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		98B87EAE2B80316A003B7B34 /* VisitanteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitanteView.swift; sourceTree = "<group>"; };
 		98BA64582B7F0CA200A1CB10 /* ConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionView.swift; sourceTree = "<group>"; };
 		98EA4F012B7C489700C83C8B /* Tal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98EA4F042B7C489700C83C8B /* TalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalApp.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				98F3BFD82B7F01EF007572DF /* AppTracking.swift */,
 				98F3BFDD2B7F03CA007572DF /* UI.swift */,
 				98BA64582B7F0CA200A1CB10 /* ConsumptionView.swift */,
+				98B87EAC2B7F2E6B003B7B34 /* Data.swift */,
+				98B87EAE2B80316A003B7B34 /* VisitanteView.swift */,
 			);
 			path = Tal;
 			sourceTree = "<group>";
@@ -315,7 +321,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98B87EAF2B80316A003B7B34 /* VisitanteView.swift in Sources */,
 				98EA4F0E2B7C489A00C83C8B /* Persistence.swift in Sources */,
+				98B87EAD2B7F2E6B003B7B34 /* Data.swift in Sources */,
 				98F3BFE22B7F047F007572DF /* ShortcutSettings.swift in Sources */,
 				98B87EAA2B7F18C5003B7B34 /* Vistante+CoreDataProperties.swift in Sources */,
 				98F3BFE42B7F04B0007572DF /* AccountSettings.swift in Sources */,

@@ -6,43 +6,8 @@
 //
 
 import Foundation
-
 import Cocoa
 import CoreData
-
-func addVisit(name: String, type: String, context: NSManagedObjectContext) {
-    let visit = Vistante(context: context)
-    visit.timestamp = Date()
-    visit.visitype = type
-    visit.type = name
-    do {
-        try context.save()
-        print("Saved \(name)")
-        } catch {
-            // Handle the error appropriately
-            print("Error saving context: \(error)")
-        }
-    
-    
-
-    print(FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).last ?? "Not Found")
-
-    //    let newVisit = VisitEntry(context: context)
-    //
-    //    newVisit.name = name
-    //    newVisit.timestamp = Date()
-    //    newVisit.type = type
-    //
-    //    do {
-    //        try context.save()
-    //        print("Saved \(name)")
-    //    } catch {
-    //        // Handle the error appropriately
-    //        print("Error saving context: \(error)")
-    //    }
-    //}
-    
-}
 
 class ApplicationMonitor {
     var viewContext: NSManagedObjectContext = PersistenceController.shared.container.viewContext
@@ -57,13 +22,18 @@ class ApplicationMonitor {
 
     @objc func appDidActivate(notification: NSNotification) {
         guard let userInfo = notification.userInfo,
-              let app = userInfo[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication,
-              let appName = app.localizedName else {
-            return
-        }
+          let app = userInfo[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication,
+              
+            let appName = app.localizedName else {
+                return
+            }
+        
+        let bundleIdentifier = app.bundleIdentifier
+    
 
-        print("Activated app: \(appName)")
-        addVisit(name: appName, type: "website", context: viewContext)
+
+        print("hbundle app: \(bundleIdentifier)")
+        addVisit(name: appName, type: "app", context: viewContext, bundleId: bundleIdentifier)
         // Here you can add logic to handle the active application
     }
 

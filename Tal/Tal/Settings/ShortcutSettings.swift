@@ -15,12 +15,9 @@ struct ShortcutsSettingsView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            
             ShortcutKeyView(keyCombination: $shortOpenTal, label: "Open Tal:")
             ShortcutKeyView(keyCombination: $shortDailyRecap, label: "Daily Recap:")
             ShortcutKeyView(keyCombination: $shortFeedback, label: "Feedback:")
-
-
         }
         
     }

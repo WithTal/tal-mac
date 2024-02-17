@@ -9,53 +9,47 @@ import SwiftUI
 import KeyboardShortcuts
 
 struct PrivacySettingsView: View {
-    @State private var excludeApps: [String] = ["Activity Monitor", "AirPort Utility", "Anki", "App Store"]
+//    @State private var excludeApps: [String] = ["Activity Monitor", "AirPort Utility", "Anki", "App Store"]
     @State private var showRunningProcesses = false
     @State private var doNotRecordPrivateBrowsing = true
     @State private var textRecognitionSetting = "Standard"
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Screen recordings are stored locally and not sent to the cloud.")
+            Text("Screen recordings never leave your device.")
                 .font(.headline)
-            HStack {
+//                .fixedSize(horizontal: false, vertical: true)
+            VStack{
+            
+                HStack {
                 Image(systemName: "info.circle")
                 Text("Note: These features have certain limitations.")
                     .foregroundColor(.gray)
-                Button("Learn more...") {
-                    // Action for learn more...
-                }
-                .buttonStyle(LinkButtonStyle())
+                
             }
             
+            }
+            .buttonStyle(LinkButtonStyle())
             Text("Exclude Apps: Select which apps you do not want recorded:")
                 .font(.subheadline)
             
-            List {
-                ForEach(excludeApps, id: \.self) { app in
-                    Text(app)
-                }
-            }
-            .frame(height: 120)
+//            List {
+//                ForEach(excludeApps, id: \.self) { app in
+//                    Text(app)
+//                }
+//            }
             
-            HStack {
-                Button(action: {
-                    // Action to show running processes...
-                }) {
-                    Label("Show Running Processes", systemImage: "plus")
-                }
+            
                 
-                Spacer()
-                
-                Toggle("Do not record Incognito and Private windows for Chrome, Safari, Arc and supported browsers...", isOn: $doNotRecordPrivateBrowsing)
-            }
+                Toggle("Do not record Incognito and Private windows on Browsers", isOn: $doNotRecordPrivateBrowsing)
+            
             
             Picker("Text Recognition:", selection: $textRecognitionSetting) {
                 Text("Standard").tag("Standard")
-                // Add other options here...
+                Text("Other").tag("Other")
             }
             
-            Spacer()
+            
             
             Button(action: {
                 // Action to delete all data...
