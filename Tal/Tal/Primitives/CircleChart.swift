@@ -43,7 +43,7 @@ struct CircleChartLegend: View {
 struct PieSliceView: View {
     var data: CircleChartData
     var startAngle: Angle
-//    var index: Int
+    var index: Int
     var endAngle: Angle
     var showLabel: Bool
     
@@ -66,10 +66,10 @@ struct PieSliceView: View {
                     .position(x: 100 + cos(midAngle.radians) * 70, y: 100 + sin(midAngle.radians) * 70)
             }
         }
-//        .scaleEffect(scale)
-//            .animate(using: .easeInOut(duration: Double(index) * 0.1), delay: Double(index) * 0.1) {
-//                scale = 1
-//            }
+        .scaleEffect(scale)
+            .animate(using: .easeInOut(duration: 1), delay: Double(index) * 0.1) {
+                scale = 1
+            }
     }
 
 }
@@ -114,7 +114,7 @@ struct CircleChartView: View {
             ZStack {
                 
                 ForEach(0..<data.count, id: \.self) { index in
-                    PieSliceView(data: data[index], startAngle: angle(atIndex: index), endAngle: angle(atIndex: index + 1), showLabel: showLabels)
+                    PieSliceView(data: data[index], startAngle: angle(atIndex: index), index: data.count-index, endAngle: angle(atIndex: index + 1), showLabel: showLabels)
                         
 
                 }
