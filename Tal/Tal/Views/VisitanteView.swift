@@ -13,59 +13,10 @@ import CoreData
 import Foundation
 import CoreData
 
-class VistanteViewModel: ObservableObject {
-    @Published var visitantes: [Vistante] = []
-    @Published var durations: [TimeInterval] = []
-
-    let context: NSManagedObjectContext
-
-    init(context: NSManagedObjectContext) {
-        self.context = context
-        fetchVistante()
-    }
-
-    func fetchVistante() {
-        let request: NSFetchRequest<Vistante> = Vistante.fetchRequest()
-        // Update sort descriptors to order the data by timestamp in descending order
-        request.sortDescriptors = [NSSortDescriptor(key: "timestamp", ascending: false)]
-
-//        request.fetchLimit = 50
-
-        // Calculate the time one hour ago from the current time
-        let oneHourAgo = Date().addingTimeInterval(-3600) // 3600 seconds = 1 hour
-
-        // Set the predicate to fetch records from the last hour
-        request.predicate = NSPredicate(format: "timestamp >= %@", oneHourAgo as NSDate)
-
-        do {
-            visitantes = try context.fetch(request)
-            calculateDurations()
-        } catch {
-            print("Error fetching data: \(error)")
-        }
-    }
-
-
-    func calculateDurations() {
-        durations = []
-        for i in 0..<visitantes.count {
-            if i < visitantes.count - 1,
-               let currentTimestamp = visitantes[i].timestamp,
-               let nextTimestamp = visitantes[i + 1].timestamp {
-                let duration = currentTimestamp.timeIntervalSince(nextTimestamp)
-                durations.append(duration)
-            } else {
-                // For the last item or if timestamp is nil, append 0 or a default value
-                durations.append(0)
-            }
-        }
-    }
-}
-
 
 struct VistanteGridView: View {
-    @ObservedObject var viewModel: VistanteViewModel
-    @ObservedObject var websiteViewModel: VistanteWebsiteViewModel
+    @ObservedObject var viewModel: AppsModel
+    @ObservedObject var websiteViewModel: WebsitesModel
     
 //    var sortedDurations: [(domain: String, duration: TimeInterval)] = VistanteWebsiteViewModel.totalDurationsByDomain.sorted { $0.key < $1.key }
 //        .map { (domain: $0.key, duration: $0.value) }

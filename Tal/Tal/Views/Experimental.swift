@@ -14,33 +14,39 @@ import SwiftUI
 
 
 
-
 struct ExperimentalView: View {
-    // Expanded data for websites
-    let websitesData = [
-        CircleChartData(value: 30, color: .orange, label: "Reddit"),
-        CircleChartData(value: 20, color: .blue, label: "Google"),
-        CircleChartData(value: 15, color: .purple, label: "YouTube"),
-        CircleChartData(value: 10, color: .pink, label: "Instagram"),
-        CircleChartData(value: 8, color: .green, label: "Wikipedia"),
-        CircleChartData(value: 7, color: .yellow, label: "Twitter"),
-        CircleChartData(value: 5, color: .gray, label: "LinkedIn"),
-        CircleChartData(value: 5, color: .red, label: "Amazon"),
-        // Add more websites as needed
-    ]
+    let websitesData: [CircleChartData]
+    let appsData: [CircleChartData]
+//    let categoriesData: [CircleChartData]
+
+    
+    
+
+////    // Expanded data for websites
+//    let websitesData = [
+//        CircleChartData(value: 30, color: .orange, label: "Reddit"),
+//        CircleChartData(value: 20, color: .blue, label: "Google"),
+//        CircleChartData(value: 15, color: .purple, label: "YouTube"),
+//        CircleChartData(value: 10, color: .pink, label: "Instagram"),
+//        CircleChartData(value: 8, color: .green, label: "Wikipedia"),
+//        CircleChartData(value: 7, color: .yellow, label: "Twitter"),
+//        CircleChartData(value: 5, color: .gray, label: "LinkedIn"),
+//        CircleChartData(value: 5, color: .red, label: "Amazon"),
+//        // Add more websites as needed
+//    ]
 
     // Expanded data for apps
-    let appsData = [
-        CircleChartData(value: 30, color: .red, label: "Netflix"),
-        CircleChartData(value: 20, color: .green, label: "Notes"),
-        CircleChartData(value: 15, color: .blue, label: "Safari"),
-        CircleChartData(value: 10, color: .yellow, label: "Mail"),
-        CircleChartData(value: 8, color: .purple, label: "Messages"),
-        CircleChartData(value: 7, color: .pink, label: "Music"),
-        CircleChartData(value: 5, color: .orange, label: "Photos"),
-        CircleChartData(value: 5, color: .gray, label: "Calendar"),
-        // Add more apps as needed
-    ]
+//    let appsData = [
+//        CircleChartData(value: 30, color: .red, label: "Netflix"),
+//        CircleChartData(value: 20, color: .green, label: "Notes"),
+//        CircleChartData(value: 15, color: .blue, label: "Safari"),
+//        CircleChartData(value: 10, color: .yellow, label: "Mail"),
+//        CircleChartData(value: 8, color: .purple, label: "Messages"),
+//        CircleChartData(value: 7, color: .pink, label: "Music"),
+//        CircleChartData(value: 5, color: .orange, label: "Photos"),
+//        CircleChartData(value: 5, color: .gray, label: "Calendar"),
+//        // Add more apps as needed
+//    ]
     
     let categoriesData = [
         CircleChartData(value: 60, color: .red, label: "Social Media"),
@@ -103,7 +109,6 @@ struct ExperimentalView: View {
                 CircleChartLegend(data:categoriesData)
             }
             })
-            
         }
         
     }

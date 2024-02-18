@@ -7,6 +7,7 @@
 
 import Foundation
 import AppKit
+import SwiftUI
 
 func iconForBundleIdentifier(_ bundleIdentifier: String) -> NSImage {
     if let appURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: bundleIdentifier) {
@@ -16,3 +17,17 @@ func iconForBundleIdentifier(_ bundleIdentifier: String) -> NSImage {
     }
 }
 
+func convertToCircleChartData(appDurations: [String: TimeInterval]) -> [CircleChartData] {
+    let colors: [Color] = [.red, .green, .blue, .yellow, .purple, .pink, .orange, .gray]
+    var chartData: [CircleChartData] = []
+
+    for (index, (app, duration)) in appDurations.enumerated() {
+        if duration >= 5 {
+            let color = colors[index % colors.count]
+            let data = CircleChartData(value: CGFloat(duration), color: color, label: app)
+            chartData.append(data)
+        }
+    }
+
+    return chartData
+}

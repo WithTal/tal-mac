@@ -11,44 +11,42 @@ import Foundation
 import Foundation
 import CoreData
 
-class VistanteWebsiteViewModel: ObservableObject {
+class WebsitesModel: ObservableObject {
     @Published var visitantesToday: [Vistante] = []
     @Published var totalDurationsByDomain: [String: TimeInterval] = [:]
-//    @Published var sortedDurations: [(domain: String, duration: TimeInterval)]
-    
-    
-//    var sortedDurations: [(domain: String, duration: TimeInterval)] {
-//            return         }
 
     let context: NSManagedObjectContext
 
     init(context: NSManagedObjectContext) {
         self.context = context
-        fetchVistante()
+        fetchWebsites()
     }
 
-    func fetchVistante() {
+    func fetchWebsites() {
         let request: NSFetchRequest<Vistante> = Vistante.fetchRequest()
-        // Update sort descriptors to order the data by timestamp in descending order
         request.sortDescriptors = [NSSortDescriptor(key: "timestamp", ascending: false)]
-//        request.fetchLimit = 50
 
         // Calculate the time one hour ago from the current time
-        let oneHourAgo = Date().addingTimeInterval(-3600) // 3600 seconds = 1 hour
+        let oneHourAgo = Date().addingTimeInterval(-800000) // 3600 seconds = 1 hour
 
-        // Set the predicate to fetch records from the last hour
-        request.predicate = NSPredicate(format: "timestamp >= %@", oneHourAgo as NSDate)
+        // Create predicates
+        let timePredicate = NSPredicate(format: "timestamp >= %@", oneHourAgo as NSDate)
+        let typePredicate = NSPredicate(format: "visitype == %@", "website") // Filter for type "website"
+
+        // Combine predicates
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [typePredicate, timePredicate])
 
         do {
             visitantesToday = try context.fetch(request)
+            print("V")
+            print(visitantesToday)
+            print("K")
             calculateTotalDurations()
-//            sortedDurations = totalDurationsByDomain.sorted { $0.key < $1.key }
-//                                                   .map { (domain: $0.key, duration: $0.value) }
-
         } catch {
             print("Error fetching data: \(error)")
         }
     }
+    
     func calculateTotalDurations() {
         totalDurationsByDomain = [:]
         var lastTimestamp: Date?

@@ -74,6 +74,7 @@ struct PieSliceView: View {
 
 }
 
+// Loading animation
 extension View {
     func animate(using animation: Animation = .easeInOut(duration: 1), delay: Double = 0, _ action: @escaping () -> Void) -> some View {
         onAppear {
@@ -83,8 +84,6 @@ extension View {
         }
     }
 }
-
-
 
 // View for the complete pie chart
 struct CircleChartView: View {
@@ -115,8 +114,6 @@ struct CircleChartView: View {
                 
                 ForEach(0..<data.count, id: \.self) { index in
                     PieSliceView(data: data[index], startAngle: angle(atIndex: index), index: data.count-index, endAngle: angle(atIndex: index + 1), showLabel: showLabels)
-                        
-
                 }
             }
         }
