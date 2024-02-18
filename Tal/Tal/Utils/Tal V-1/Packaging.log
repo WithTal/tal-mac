@@ -1,0 +1,157 @@
+2024-02-18 04:34:33 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x12dbc0080; archive(resolved)="<IDEArchive: 0x60000b665080>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodDevelopmentSignedMac: 0x60000915ef70>", team(resolved)="<IDEProvisioningDisambiguatableBasicTeam: 0x600000a1dc40; teamID='7G7ATN48NM', teamName='Pablo Hansen', teamType='Individual', username='pablosfsanchez@gmail.com', isFreeProvisioningTeam='0'>">
+	Chain (11, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x12dbc0080; archive = "<IDEArchive: 0x60000b665080>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x60000915ef70>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600000a1dc40; teamID='7G7ATN48NM', teamName='Pablo Hansen', teamType='Individual', username='pablosfsanchez@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionProcessingPipelineContext: 0x2b6619a10; archive = "<IDEArchive: 0x60000b665080>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x60000915ef70>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600000a1dc40; teamID='7G7ATN48NM', teamName='Pablo Hansen', teamType='Individual', username='pablosfsanchez@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x15b6119f0; archive = "<IDEArchive: 0x60000b665080>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x60000915ef70>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600000a1dc40; teamID='7G7ATN48NM', teamName='Pablo Hansen', teamType='Individual', username='pablosfsanchez@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2c4232d00; archive = "<IDEArchive: 0x60000b665080>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x60000915ef70>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600000a1dc40; teamID='7G7ATN48NM', teamName='Pablo Hansen', teamType='Individual', username='pablosfsanchez@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x12dbbe820; archive = "<IDEArchive: 0x60000b665080>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x60000915ef70>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600000a1dc40; teamID='7G7ATN48NM', teamName='Pablo Hansen', teamType='Individual', username='pablosfsanchez@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2b7cebe30; archive = "<IDEArchive: 0x60000b665080>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x60000915ef70>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600000a1dc40; teamID='7G7ATN48NM', teamName='Pablo Hansen', teamType='Individual', username='pablosfsanchez@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2b7cebc10; archive = "<IDEArchive: 0x60000b665080>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x60000915ef70>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600000a1dc40; teamID='7G7ATN48NM', teamName='Pablo Hansen', teamType='Individual', username='pablosfsanchez@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x12dbb9010; archive = "<IDEArchive: 0x60000b665080>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x60000915ef70>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600000a1dc40; teamID='7G7ATN48NM', teamName='Pablo Hansen', teamType='Individual', username='pablosfsanchez@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x12dbbe330; archive = "<IDEArchive: 0x60000b665080>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x60000915ef70>", team="(null)">
+	<IDEDistributionContext: 0x2b621cf50; archive = "<IDEArchive: 0x60000b665080>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x60000915ef70>", team="(null)">
+	<IDEDistributionContext: 0x12b31c950; archive = "<IDEArchive: 0x60000b665080>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x12dbc0080>
+2024-02-18 04:34:33 +0000  Processing step: IDEDistributionCreateDestRootStep
+2024-02-18 04:34:33 +0000  Processing step: IDEDistributionCopyItemStep
+2024-02-18 04:34:33 +0000  Running /usr/bin/ditto '-V' '/Users/vicky/Library/Developer/Xcode/Archives/2024-02-17/Tal 2-17-24, 20.25.xcarchive/Products/Applications/Tal.app' '/var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/Root/Applications/Tal.app'
+2024-02-18 04:34:33 +0000  >>> Copying /Users/vicky/Library/Developer/Xcode/Archives/2024-02-17/Tal 2-17-24, 20.25.xcarchive/Products/Applications/Tal.app 
+2024-02-18 04:34:34 +0000  copying file ./Contents/_CodeSignature/CodeResources ... 
+2024-02-18 04:34:34 +0000  10232 bytes for ./Contents/_CodeSignature/CodeResources
+2024-02-18 04:34:34 +0000  copying file ./Contents/MacOS/Tal ... 
+2024-02-18 04:34:34 +0000  822784 bytes for ./Contents/MacOS/Tal
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/de.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  541 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/de.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/ar.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  707 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/ar.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/zh-Hans.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  454 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/zh-Hans.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/ja.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  570 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/ja.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/zh-TW.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  429 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/zh-TW.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/en.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  490 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/en.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/es.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  565 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/es.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/cs.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  463 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/cs.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/ko.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  561 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/ko.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/hu.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  560 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/hu.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/pt-BR.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  482 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/pt-BR.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/ru.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  716 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/ru.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/fr.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  564 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/fr.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/nl.lproj/Localizable.strings ... 
+2024-02-18 04:34:34 +0000  543 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Resources/nl.lproj/Localizable.strings
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Info.plist ... 
+2024-02-18 04:34:34 +0000  1160 bytes for ./Contents/Resources/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Info.plist
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/Tal.momd/Tal.mom ... 
+2024-02-18 04:34:34 +0000  2061 bytes for ./Contents/Resources/Tal.momd/Tal.mom
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/Tal.momd/VersionInfo.plist ... 
+2024-02-18 04:34:34 +0000  287 bytes for ./Contents/Resources/Tal.momd/VersionInfo.plist
+2024-02-18 04:34:34 +0000  copying file ./Contents/Resources/Tal.momd/Tal.omo ... 
+2024-02-18 04:34:34 +0000  5048 bytes for ./Contents/Resources/Tal.momd/Tal.omo
+2024-02-18 04:34:34 +0000  copying file ./Contents/Info.plist ... 
+2024-02-18 04:34:34 +0000  1253 bytes for ./Contents/Info.plist
+2024-02-18 04:34:34 +0000  copying file ./Contents/PkgInfo ... 
+2024-02-18 04:34:34 +0000  8 bytes for ./Contents/PkgInfo
+2024-02-18 04:34:34 +0000  /usr/bin/ditto exited with 0
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionEmbedProfileStep
+2024-02-18 04:34:34 +0000  Skipping profile for item: <IDEDistributionItem: 0x6000737f4b40; bundleID='pablo.Tal', path='<DVTFilePath:0x60000b6e7000:'/Users/vicky/Library/Developer/Xcode/Archives/2024-02-17/Tal 2-17-24, 20.25.xcarchive/Products/Applications/Tal.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60001f5fb570; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000645acb0; name='Apple Development: Pablo Hansen (W39YH3665P)', hash='70BCC7FDA0F58CFBBA9330CA8415EA28560310CD', serialNumber='2A1D93F787077438E8EEF954923B696E', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2023-10-26 12:51:48 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.assets.movies.read-write" = 1;
+    "com.apple.security.assets.music.read-write" = 1;
+    "com.apple.security.assets.pictures.read-write" = 1;
+    "com.apple.security.files.downloads.read-write" = 1;
+    "com.apple.security.files.user-selected.read-write" = 1;
+}', teamID='7G7ATN48NM', identifier='pablo.Tal', executablePath='<DVTFilePath:0x60000b6f09c0:'/Users/vicky/Library/Developer/Xcode/Archives/2024-02-17/Tal 2-17-24, 20.25.xcarchive/Products/Applications/Tal.app/Contents/MacOS/Tal'>', hardenedRuntime='1'>'>
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionInfoPlistStep
+2024-02-18 04:34:34 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2024-02-18 04:34:34 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2024-02-18 04:34:34 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionSymbolsStep
+2024-02-18 04:34:34 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionAppThinningStep
+2024-02-18 04:34:34 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionArchThinningStep
+2024-02-18 04:34:34 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/Root/Applications/Tal.app/Contents/MacOS/Tal' '-verify_arch' 'arm64e'
+2024-02-18 04:34:34 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2024-02-18 04:34:34 +0000  Skipping architecture thinning for item "Tal" because arch "arm64e" wasn't found
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionODRStep
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionStripXattrsStep
+2024-02-18 04:34:34 +0000  Running /usr/bin/xattr '-crs' '/var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/Root/Applications/Tal.app'
+2024-02-18 04:34:34 +0000  /usr/bin/xattr exited with 0
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionCodesignStep
+2024-02-18 04:34:34 +0000  Entitlements for <IDEDistributionItem: 0x6000737f4b40; bundleID='pablo.Tal', path='<DVTFilePath:0x60000b6e7000:'/Users/vicky/Library/Developer/Xcode/Archives/2024-02-17/Tal 2-17-24, 20.25.xcarchive/Products/Applications/Tal.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60001f5fb570; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000645acb0; name='Apple Development: Pablo Hansen (W39YH3665P)', hash='70BCC7FDA0F58CFBBA9330CA8415EA28560310CD', serialNumber='2A1D93F787077438E8EEF954923B696E', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2023-10-26 12:51:48 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.assets.movies.read-write" = 1;
+    "com.apple.security.assets.music.read-write" = 1;
+    "com.apple.security.assets.pictures.read-write" = 1;
+    "com.apple.security.files.downloads.read-write" = 1;
+    "com.apple.security.files.user-selected.read-write" = 1;
+}', teamID='7G7ATN48NM', identifier='pablo.Tal', executablePath='<DVTFilePath:0x60000b6f09c0:'/Users/vicky/Library/Developer/Xcode/Archives/2024-02-17/Tal 2-17-24, 20.25.xcarchive/Products/Applications/Tal.app/Contents/MacOS/Tal'>', hardenedRuntime='1'>'>: {
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.assets.movies.read-write" = 1;
+    "com.apple.security.assets.music.read-write" = 1;
+    "com.apple.security.assets.pictures.read-write" = 1;
+    "com.apple.security.files.downloads.read-write" = 1;
+    "com.apple.security.files.user-selected.read-write" = 1;
+}
+2024-02-18 04:34:34 +0000  Entitlements for <IDEDistributionItem: 0x6000737f4b40; bundleID='pablo.Tal', path='<DVTFilePath:0x60000b6e7000:'/Users/vicky/Library/Developer/Xcode/Archives/2024-02-17/Tal 2-17-24, 20.25.xcarchive/Products/Applications/Tal.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60001f5fb570; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000647a940; name='Apple Development: Pablo Hansen (W39YH3665P)', hash='70BCC7FDA0F58CFBBA9330CA8415EA28560310CD', serialNumber='2A1D93F787077438E8EEF954923B696E', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2023-10-26 12:51:48 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.assets.movies.read-write" = 1;
+    "com.apple.security.assets.music.read-write" = 1;
+    "com.apple.security.assets.pictures.read-write" = 1;
+    "com.apple.security.files.downloads.read-write" = 1;
+    "com.apple.security.files.user-selected.read-write" = 1;
+}', teamID='7G7ATN48NM', identifier='pablo.Tal', executablePath='<DVTFilePath:0x60000b6f09c0:'/Users/vicky/Library/Developer/Xcode/Archives/2024-02-17/Tal 2-17-24, 20.25.xcarchive/Products/Applications/Tal.app/Contents/MacOS/Tal'>', hardenedRuntime='1'>'> are: {
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.assets.movies.read-write" = 1;
+    "com.apple.security.assets.music.read-write" = 1;
+    "com.apple.security.assets.pictures.read-write" = 1;
+    "com.apple.security.files.downloads.read-write" = 1;
+    "com.apple.security.files.user-selected.read-write" = 1;
+}
+2024-02-18 04:34:34 +0000  Writing entitlements for <IDEDistributionItem: 0x6000737f4b40; bundleID='pablo.Tal', path='<DVTFilePath:0x60000b6e7000:'/Users/vicky/Library/Developer/Xcode/Archives/2024-02-17/Tal 2-17-24, 20.25.xcarchive/Products/Applications/Tal.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60001f5fb570; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000064789a0; name='Apple Development: Pablo Hansen (W39YH3665P)', hash='70BCC7FDA0F58CFBBA9330CA8415EA28560310CD', serialNumber='2A1D93F787077438E8EEF954923B696E', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2023-10-26 12:51:48 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.assets.movies.read-write" = 1;
+    "com.apple.security.assets.music.read-write" = 1;
+    "com.apple.security.assets.pictures.read-write" = 1;
+    "com.apple.security.files.downloads.read-write" = 1;
+    "com.apple.security.files.user-selected.read-write" = 1;
+}', teamID='7G7ATN48NM', identifier='pablo.Tal', executablePath='<DVTFilePath:0x60000b6f09c0:'/Users/vicky/Library/Developer/Xcode/Archives/2024-02-17/Tal 2-17-24, 20.25.xcarchive/Products/Applications/Tal.app/Contents/MacOS/Tal'>', hardenedRuntime='1'>'> to: /var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/entitlements~~~Qbtvk9
+2024-02-18 04:34:34 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '70BCC7FDA0F58CFBBA9330CA8415EA28560310CD' '--entitlements' '/var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/entitlements~~~Qbtvk9' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/Root/Applications/Tal.app'
+2024-02-18 04:34:34 +0000  /var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/Root/Applications/Tal.app: replacing existing signature
+2024-02-18 04:34:34 +0000  /var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/Root/Applications/Tal.app: signed app bundle with Mach-O universal (x86_64 arm64) [pablo.Tal]
+2024-02-18 04:34:34 +0000  /usr/bin/codesign exited with 0
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionZipODRItemStep
+2024-02-18 04:34:34 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionSkipPackagingStep
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2024-02-18 04:34:34 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2024-02-18 04:34:34 +0000  IDEDistributionItem init <DVTFilePath:0x6000737f2fa0:'/var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/Root/Applications/Tal.app'>
+2024-02-18 04:34:34 +0000  [OPTIONAL] Didn't find embedded provisioning profile for <DVTFilePath:0x6000737f2fa0:'/var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/Root/Applications/Tal.app'>: Error Domain=NSCocoaErrorDomain Code=4 "No file at <DVTFilePath:0x60000bf59b80:'/var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/Root/Applications/Tal.app/Contents/embedded.provisionprofile'>" UserInfo={NSLocalizedDescription=No file at <DVTFilePath:0x60000bf59b80:'/var/folders/vz/lk5b1jfd4711vnp0_dg2fx080000gn/T/XcodeDistPipeline.~~~uYrbJF/Root/Applications/Tal.app/Contents/embedded.provisionprofile'>}
+2024-02-18 04:34:34 +0000  Processing step: IDEDistributionCreateManifestStep
+2024-02-18 04:34:34 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so

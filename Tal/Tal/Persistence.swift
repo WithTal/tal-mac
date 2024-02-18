@@ -18,7 +18,7 @@ struct PersistenceController {
 //            newVisit.name = "Example Website"
 //            newVisit.timestamp = Date()
 //            newVisit.type = "Website" // Or "App"
-//        }
+//       }
         do {
             try viewContext.save()
         } catch {

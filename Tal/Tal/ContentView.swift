@@ -21,9 +21,6 @@ struct ContentView: View {
 
     let context = PersistenceController.shared.container.viewContext
     
-    
-            
-
     // State to control screenshot taking
     @State private var isTakingScreenshots = false
 
@@ -32,11 +29,10 @@ struct ContentView: View {
             Button(action: toggleScreenshotTaking) {
                 Text(isTakingScreenshots ? "Stop Screenshots" : "Start Screenshots")
             }
-//            BarChart()
-            VistanteGridView(viewModel: VistanteViewModel(context: context))
+            ExperimentalView()
+            VistanteGridView(viewModel: VistanteViewModel(context: context), websiteViewModel: VistanteWebsiteViewModel(context: context))
         }
         .padding()
-        
         .background(Color(red: 0.0627, green: 0.0627, blue: 0.0667))
     }
     

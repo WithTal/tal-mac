@@ -10,7 +10,6 @@ import SwiftUI
 @main
 struct TalApp: App {
     let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -18,7 +17,6 @@ struct TalApp: App {
         }
         Settings {
             SettingsView()
-            
         }
     }
 }

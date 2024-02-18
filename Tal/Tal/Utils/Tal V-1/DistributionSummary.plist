@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Tal</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>x86_64</string>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>70BCC7FDA0F58CFBBA9330CA8415EA28560310CD</string>
+				<key>dateExpires</key>
+				<string>10/25/24</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>com.apple.security.app-sandbox</key>
+				<true/>
+				<key>com.apple.security.assets.movies.read-write</key>
+				<true/>
+				<key>com.apple.security.assets.music.read-write</key>
+				<true/>
+				<key>com.apple.security.assets.pictures.read-write</key>
+				<true/>
+				<key>com.apple.security.files.downloads.read-write</key>
+				<true/>
+				<key>com.apple.security.files.user-selected.read-write</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>Tal.app</string>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>7G7ATN48NM</string>
+				<key>name</key>
+				<string>Pablo Hansen</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>
