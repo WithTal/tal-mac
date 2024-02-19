@@ -64,11 +64,23 @@ class WebsitesModel: ObservableObject {
     }
 
     func extractDomain(from urlString: String?) -> String {
-        guard let urlString = urlString,
-              let url = URL(string: urlString),
-              let domain = url.host else {
+        guard let urlString = urlString else {
+            print("URL string is nil")
             return "Unknown"
         }
+
+        var formattedURLString = urlString
+
+        // Check if the URL string contains a scheme. If not, prepend "http://".
+        if !formattedURLString.contains("://") {
+            formattedURLString = "http://" + formattedURLString
+        }
+
+        guard let url = URL(string: formattedURLString), let domain = url.host else {
+            print("Invalid URL: \(formattedURLString)")
+            return "Unknown"
+        }
+
         return domain
     }
 }

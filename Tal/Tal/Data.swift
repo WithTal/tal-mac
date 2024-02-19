@@ -8,14 +8,15 @@
 import Foundation
 import CoreData
 
-func addVisit(name: String, type: String, context: NSManagedObjectContext, bundleId: String? = nil) {
-    
-    
+func addVisit(name: String, type: String, context: NSManagedObjectContext, bundleId: String? = nil, timestamp: Date? = nil) {
     let visit = Vistante(context: context)
-    visit.timestamp = Date()
+    
+    // Use the provided timestamp if available; otherwise, use the current time
+    visit.timestamp = timestamp ?? Date()
     visit.visitype = type
     visit.type = name
-    visit.bundleId  = bundleId
+    visit.bundleId = bundleId
+    print(visit)
     
     do {
         try context.save()
@@ -27,7 +28,7 @@ func addVisit(name: String, type: String, context: NSManagedObjectContext, bundl
     
     
 
-    print(FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).last ?? "Not Found")
+//    print(FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).last ?? "Not Found")
 
     //    let newVisit = VisitEntry(context: context)
     //

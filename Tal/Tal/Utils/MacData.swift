@@ -18,7 +18,19 @@ func iconForBundleIdentifier(_ bundleIdentifier: String) -> NSImage {
 }
 
 func convertToCircleChartData(appDurations: [String: TimeInterval]) -> [CircleChartData] {
-    let colors: [Color] = [.red, .green, .blue, .yellow, .purple, .pink, .orange, .gray]
+    // Define a vibrant color palette
+    let colors: [Color] = [
+        Color(hue: 0.2, saturation: 0.5, brightness: 1.0), // Light Red
+        Color(hue: 0.4, saturation: 0.5, brightness: 1.0), // Light Green
+        Color(hue: 0.55, saturation: 0.5, brightness: 1.0), // Light Blue
+        Color(hue: 0.12, saturation: 0.5, brightness: 1.0), // Light Yellow
+        Color(hue: 0.75, saturation: 0.5, brightness: 1.0), // Light Purple
+        Color(hue: 0.88, saturation: 0.5, brightness: 1.0), // Light Pink
+        Color(hue: 0.08, saturation: 0.5, brightness: 1.0), // Light Orange
+//        Color(hue: 0.0, saturation: 0.0, brightness: 0.8)   // Light Gray
+    ]
+
+
     var chartData: [CircleChartData] = []
 
     for (index, (app, duration)) in appDurations.enumerated() {

@@ -15,6 +15,8 @@ import Cocoa
 import CoreGraphics
 
 class ScreenshotManager {
+    
+    
     var timer: Timer?
     var isRunning = false
     var ocrQueue = DispatchQueue(label: "com.yourapp.ocrQueue")
@@ -24,10 +26,61 @@ class ScreenshotManager {
 
         // Set up a timer to take a screenshot every 10 seconds
         timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { [weak self] _ in
+            
+            self?.checkAndLogMissingVisit()
             self?.takeScreenshot()
+//            print(self?.fetchLastScreenshotTime())
         }
         isRunning = true
     }
+    
+    func checkAndLogMissingVisit() {
+        guard let lastScreenshotTime = fetchLastScreenshotTime() else { return }
+
+        let currentTime = Date()
+        let timeSinceLastScreenshot = currentTime.timeIntervalSince(lastScreenshotTime)
+
+        if timeSinceLastScreenshot > 20 {
+            let missingVisitTime = lastScreenshotTime.addingTimeInterval(20)
+            logVisitNone(at: missingVisitTime)
+        }
+    }
+
+    private func logVisitNone(at timestamp: Date) {
+//        let newVisit = Visit(context: viewContext) // Assuming Visit is your Core Data entity
+//        newVisit.timestamp = timestamp
+//        newVisit.value = "none"
+        addVisit(name: "None", type: "website", context: viewContext, timestamp: timestamp)
+        addVisit(name: "None", type: "app", context: viewContext, timestamp: timestamp)
+
+        do {
+            try viewContext.save()
+            print("Logged a visit with 'none' 20 seconds after last screenshot.")
+        } catch {
+            print("Failed to log 'none' visit: \(error)")
+        }
+    }
+     
+    
+    func fetchLastScreenshotTime() -> Date? {
+            let fetchRequest: NSFetchRequest<Screenshot> = Screenshot.fetchRequest()
+            
+            // Sort the fetch request so the most recent screenshot is first
+            let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
+            fetchRequest.sortDescriptors = [sortDescriptor]
+            
+            // We only need the most recent screenshot
+            fetchRequest.fetchLimit = 1
+
+            do {
+                let results = try viewContext.fetch(fetchRequest)
+                return results.first?.timestamp
+            } catch {
+                print("Error fetching last screenshot time: \(error)")
+                return nil
+            }
+        }
+
 
     func stopTakingScreenshots() {
         timer?.invalidate()
@@ -62,9 +115,9 @@ class ScreenshotManager {
     
 
     private func takeScreenshot() {
-        print("Taking screenshot")
-        print("List of apps in app folder")
-        print(enumerateAllApps())
+//        print("Taking screenshot")
+//        print("List of apps in app folder")
+//        print(enumerateAllApps())
         let displayID = CGMainDisplayID()
         let screenFrame = CGDisplayBounds(displayID)
         guard let image = CGWindowListCreateImage(screenFrame, .optionOnScreenOnly, kCGNullWindowID, .bestResolution) else { return }
@@ -73,15 +126,28 @@ class ScreenshotManager {
        ocrQueue.async { [weak self] in
            self?.performOCR(on: image)
        }
+        
+        let timestamp = Date()
+
         guard let destinationUrl = getDestinationUrl() else { return }
         guard let destination = CGImageDestinationCreateWithURL(destinationUrl as CFURL, UTType.png.identifier as CFString, 1, nil) else { return }
         CGImageDestinationAddImage(destination, image, nil)
         CGImageDestinationFinalize(destination)
 
         // Log the file path
-        print("Screenshot saved to: \(destinationUrl.path)")
+        let newScreenshot = Screenshot(context: viewContext)
+        newScreenshot.timestamp = timestamp
+        newScreenshot.filepath = destinationUrl.path
+        do {
+            try viewContext.save()
+            print("Screenshot info saved: \(destinationUrl.path)")
+        } catch {
+            print("Failed to save screenshot info: \(error)")
+        }
     }
 //    zzzzzzzzzzzzz
+    
+
     
     var viewContext: NSManagedObjectContext = PersistenceController.shared.container.viewContext
 
@@ -112,6 +178,7 @@ class ScreenshotManager {
                } else {
                    print("No URL found in the text")
                }
+               
 
                // ... [rest of the code]
 

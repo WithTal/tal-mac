@@ -31,24 +31,31 @@ struct ContentView: View {
     @State private var isTakingScreenshots = false
 
     var body: some View {
-        ScrollView {
+        ZStack(alignment: .top) {
+            ScrollView {
+                VStack {
+                    Spacer().frame(height: 60) // Space for the button, adjust as needed
+
+                    let appsChartData = convertToCircleChartData(appDurations: appsModel.timeSpentPerApp)
+                    let websiteChartData = convertToCircleChartData(appDurations: websitesModel.totalDurationsByDomain)
+
+                    ExperimentalView(websitesData: websiteChartData, appsData: appsChartData)
+                    VistanteGridView(viewModel: appsModel, websiteViewModel: websitesModel)
+                }
+                .padding([.leading, .trailing], 20)
+            }
+            .background(Color(red: 0.0627, green: 0.0627, blue: 0.0667).opacity(1.0))
+            .zIndex(0) // Ensures ScrollView is below the button
+
             Button(action: toggleScreenshotTaking) {
                 Text(isTakingScreenshots ? "Stop Screenshots" : "Start Screenshots")
             }
-            
-            let appsChartData = convertToCircleChartData(appDurations: appsModel.timeSpentPerApp)
-            
-            let websiteChartData = convertToCircleChartData(appDurations: websitesModel.totalDurationsByDomain)
-            
-        
-            ExperimentalView(websitesData: websiteChartData, appsData: appsChartData)
-
-//            ExperimentalView()
-            VistanteGridView(viewModel: appsModel, websiteViewModel:websitesModel)
+            .padding(.top, 20)
+//            .background(Color(red: 0.0627, green: 0.0627, blue: 0.0667))
+            .zIndex(1) // Ensures the button layer is above the ScrollView
         }
-        .padding([.top, .leading, .trailing], 20)
-        .background(Color(red: 0.0627, green: 0.0627, blue: 0.0667))
     }
+
     
     private func toggleScreenshotTaking() {
         if isTakingScreenshots {
