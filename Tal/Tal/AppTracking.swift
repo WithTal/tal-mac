@@ -34,6 +34,10 @@ class ApplicationMonitor {
 
         print("hbundle app: \(bundleIdentifier)")
         addVisit(name: appName, type: "app", context: viewContext, bundleId: bundleIdentifier)
+        
+        if appName != "Google Chrome"{
+            addVisit(name: "None", type: "website", context: viewContext)
+        }
         // Here you can add logic to handle the active application
     }
 

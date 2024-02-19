@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98782A942B81C25400E187F0 /* Experimental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98782A932B81C25400E187F0 /* Experimental.swift */; };
+		98782A942B81C25400E187F0 /* CircleCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98782A932B81C25400E187F0 /* CircleCharts.swift */; };
 		98782A962B81C3F500E187F0 /* CircleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98782A952B81C3F500E187F0 /* CircleChart.swift */; };
 		98782A992B81C89800E187F0 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98782A982B81C89800E187F0 /* Time.swift */; };
 		98782A9B2B81C9C100E187F0 /* ChartBound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98782A9A2B81C9C100E187F0 /* ChartBound.swift */; };
@@ -58,7 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		98782A932B81C25400E187F0 /* Experimental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experimental.swift; sourceTree = "<group>"; };
+		98782A932B81C25400E187F0 /* CircleCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCharts.swift; sourceTree = "<group>"; };
 		98782A952B81C3F500E187F0 /* CircleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleChart.swift; sourceTree = "<group>"; };
 		98782A982B81C89800E187F0 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		98782A9A2B81C9C100E187F0 /* ChartBound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBound.swift; sourceTree = "<group>"; };
@@ -141,8 +141,9 @@
 		98B87EB02B804B68003B7B34 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				98F3BFCB2B7C5429007572DF /* ScreenshotManager.swift */,
 				98B87EAE2B80316A003B7B34 /* VisitanteView.swift */,
-				98782A932B81C25400E187F0 /* Experimental.swift */,
+				98782A932B81C25400E187F0 /* CircleCharts.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,7 +196,6 @@
 				98EA4F122B7C489A00C83C8B /* Tal.entitlements */,
 				98EA4F0F2B7C489A00C83C8B /* Tal.xcdatamodeld */,
 				98EA4F0A2B7C489A00C83C8B /* Preview Content */,
-				98F3BFCB2B7C5429007572DF /* ScreenshotManager.swift */,
 				98F3BFD82B7F01EF007572DF /* AppTracking.swift */,
 				98F3BFDD2B7F03CA007572DF /* UI.swift */,
 				98B87EAC2B7F2E6B003B7B34 /* Data.swift */,
@@ -395,7 +395,7 @@
 				98782A992B81C89800E187F0 /* Time.swift in Sources */,
 				98B87EA92B7F18C5003B7B34 /* Vistante+CoreDataClass.swift in Sources */,
 				98B87EB52B804B8F003B7B34 /* MacData.swift in Sources */,
-				98782A942B81C25400E187F0 /* Experimental.swift in Sources */,
+				98782A942B81C25400E187F0 /* CircleCharts.swift in Sources */,
 				98F3BFCC2B7C5429007572DF /* ScreenshotManager.swift in Sources */,
 				98782A9B2B81C9C100E187F0 /* ChartBound.swift in Sources */,
 				98EA4F072B7C489700C83C8B /* ContentView.swift in Sources */,

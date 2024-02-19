@@ -27,13 +27,15 @@ func convertToCircleChartData(appDurations: [String: TimeInterval]) -> [CircleCh
         Color(hue: 0.75, saturation: 0.5, brightness: 1.0), // Light Purple
         Color(hue: 0.88, saturation: 0.5, brightness: 1.0), // Light Pink
         Color(hue: 0.08, saturation: 0.5, brightness: 1.0), // Light Orange
-//        Color(hue: 0.0, saturation: 0.0, brightness: 0.8)   // Light Gray
+        // Removed Light Gray to have exactly 8 colors
     ]
-
 
     var chartData: [CircleChartData] = []
 
-    for (index, (app, duration)) in appDurations.enumerated() {
+    // Sort the app durations by descending order and take the first 8
+    let sortedAppDurations = appDurations.sorted { $0.value > $1.value }.prefix(8)
+
+    for (index, (app, duration)) in sortedAppDurations.enumerated() {
         if duration >= 5 {
             let color = colors[index % colors.count]
             let data = CircleChartData(value: CGFloat(duration), color: color, label: app)
@@ -43,3 +45,4 @@ func convertToCircleChartData(appDurations: [String: TimeInterval]) -> [CircleCh
 
     return chartData
 }
+
