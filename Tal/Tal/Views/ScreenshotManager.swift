@@ -150,7 +150,9 @@ class ScreenshotManager {
 
     
     var viewContext: NSManagedObjectContext = PersistenceController.shared.container.viewContext
-
+    
+   
+    
     private func performOCR(on image: CGImage) {
         let viewContext: NSManagedObjectContext = PersistenceController.shared.container.viewContext
            let request = VNRecognizeTextRequest { request, error in
@@ -162,6 +164,16 @@ class ScreenshotManager {
                let recognizedStrings = observations.compactMap { observation in
                    observation.topCandidates(1).first?.string
                }.joined(separator: "\n")
+               
+               if recognizedStrings.contains("ycombinator.com") {
+                   DispatchQueue.main.async {
+                       NotificationManager.shared.showNotification()
+                   }
+               }
+               
+           
+
+
 
                
                // Regular expression pattern for URLs with or without schemes

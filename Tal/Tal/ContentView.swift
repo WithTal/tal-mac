@@ -31,29 +31,58 @@ struct ContentView: View {
     @State private var isTakingScreenshots = false
 
     var body: some View {
-        ZStack(alignment: .top) {
-            ScrollView {
-                VStack {
-                    Spacer().frame(height: 60) // Space for the button, adjust as needed
-
-                    let appsChartData = convertToCircleChartData(appDurations: appsModel.timeSpentPerApp)
-                    let websiteChartData = convertToCircleChartData(appDurations: websitesModel.totalDurationsByDomain)
-
-                    ExperimentalView(websitesData: websiteChartData, appsData: appsChartData)
-                    VistanteGridView(viewModel: appsModel, websiteViewModel: websitesModel)
+//        VStack{
+//            Image("Image") // Replace with your logo's image name
+////                .resizable()
+////                .aspectRatio(contentMode: .fit)
+//                .frame(width: 200, height: 200) // Adj
+//
+            ZStack(alignment: .top) {
+                ScrollView {
+                    VStack {
+                        Spacer().frame(height: 60) // Space for the button, adjust as needed
+                        
+                        let appsChartData = convertToCircleChartData(appDurations: appsModel.timeSpentPerApp)
+                        let websiteChartData = convertToCircleChartData(appDurations: websitesModel.totalDurationsByDomain)
+                        
+                        ExperimentalView(websitesData: websiteChartData, appsData: appsChartData)
+                        VistanteGridView(viewModel: appsModel, websiteViewModel: websitesModel)
+                    }
+                    .padding([.leading, .trailing], 20)
                 }
-                .padding([.leading, .trailing], 20)
-            }
-            .background(Color(red: 0.0627, green: 0.0627, blue: 0.0667).opacity(1.0))
-            .zIndex(0) // Ensures ScrollView is below the button
+                .background(LinearGradient(gradient: Gradient(colors: [Color(red: 25/255, green: 25/255, blue: 25/255), Color(red: 10/255, green: 10/255, blue: 10/255)]), startPoint: .leading, endPoint: .trailing))
+                
+                //            .background(Color(red: 0.0627, green: 0.0627, blue: 0.0667).opacity(1.0))
+                .zIndex(0) // Ensures ScrollView is below the button
+                
+                
+                Button(action: toggleScreenshotTaking) {
+                    Text(isTakingScreenshots ? "Stop Screenshots" : "Start Screenshots")
+        
+                }
+                .padding(.top, 20)
+                .zIndex(1) // Ensures the button is above the ScrollView
 
-            Button(action: toggleScreenshotTaking) {
-                Text(isTakingScreenshots ? "Stop Screenshots" : "Start Screenshots")
+                // Logo in the top left corner
+                HStack {
+                    Image("Image") // Replace with your logo's image name
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50, height: 50) // Adjust size as needed
+                    Spacer()
+                }
+                .padding(.leading, 30)
+                .padding(.trailing, 20)
+                .padding(.top, 20)
+                .zIndex(1) // Ensures the logo is above the ScrollView
+
+                
+                
+                
+                
+//            }
             }
-            .padding(.top, 20)
-//            .background(Color(red: 0.0627, green: 0.0627, blue: 0.0667))
-            .zIndex(1) // Ensures the button layer is above the ScrollView
-        }
+        
     }
 
     
