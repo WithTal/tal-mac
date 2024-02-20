@@ -16,9 +16,41 @@ class PopperView {
     static let shared = PopperView()
 
     private var rumbleTimer: Timer?
+//    private var logoColor = Color.black  // Default logo color
 
+    var onColorChange: ((Color) -> Void)?
+
+        // ... existing code ...
+
+        public func changeLogoColor(to color: Color) {
+            onColorChange?(color)
+        }
+    
     
     private init() {} // Private initializer to restrict instantiation
+    
+ 
+    
+    public func expandNotification() {
+        guard let window = notificationWindow else { return }
+        
+        let expandedWidth: CGFloat = 400 // New width
+        let expandedHeight: CGFloat = 400 // New height
+        let expandedFrame = NSRect(
+            x: window.frame.origin.x - (expandedWidth - window.frame.width) / 2,
+            y: window.frame.origin.y - (expandedHeight - window.frame.height) / 2,
+            width: expandedWidth,
+            height: expandedHeight
+        )
+
+        NSAnimationContext.runAnimationGroup({ context in
+            context.duration = 0.5
+            window.animator().setFrame(expandedFrame, display: true)
+        })
+    }
+
+    
+    
 
     // Public function to hide the notification
     public func hideNotification() {
@@ -164,19 +196,20 @@ class PopperView {
         deinit {
             rumbleTimer?.invalidate()
         }
-
-    
 }
 
 
 struct NotificationView: View {
+    @State private var logoColor: Color = .black
+    
     var body: some View {
         VStack {
             Image("Image") // Replace with your logo's image name
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50, height: 50)
-                .background(.black)
+//                .background(.black)
+                .background(logoColor)
                 .cornerRadius(10)
 
             Button("Close", action: {
@@ -186,6 +219,11 @@ struct NotificationView: View {
             .background(Color.red)
             .foregroundColor(.white)
             .cornerRadius(5)
+        }
+        .onAppear {
+            PopperView.shared.onColorChange = { newColor in
+                self.logoColor = newColor
+            }
         }
     }
 }
