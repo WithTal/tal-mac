@@ -1,8 +1,8 @@
 //
-//  ScreenshotManager.swift
+//  ScreenshotController.swift
 //  Tal
 //
-//  Created by Pablo Hansen on 2/13/24.
+//  Created by Pablo Hansen on 2/20/24.
 //
 
 import Foundation
@@ -13,8 +13,9 @@ import UniformTypeIdentifiers
 import Vision
 import Cocoa
 import CoreGraphics
+import Accelerate
 
-class ScreenshotManager {
+class ScreenshotController {
     
     
     var timer: Timer?
@@ -111,40 +112,100 @@ class ScreenshotManager {
     }
 
     
+    private func resizeImage(_ image: CGImage, toWidth width: Int, andHeight height: Int) -> CGImage? {
+        var format = vImage_CGImageFormat(bitsPerComponent: 8, bitsPerPixel: 32, colorSpace: nil,
+                                          bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.first.rawValue),
+                                          version: 0, decode: nil, renderingIntent: CGColorRenderingIntent.defaultIntent)
+        var sourceBuffer = vImage_Buffer()
+        defer { sourceBuffer.data.deallocate() }
+        var error = vImageBuffer_InitWithCGImage(&sourceBuffer, &format, nil, image, vImage_Flags(kvImageNoFlags))
+        guard error == kvImageNoError else { return nil }
 
+        let destWidth = width
+        let destHeight = height
+        let bytesPerPixel = image.bitsPerPixel / image.bitsPerComponent
+        let destBytesPerRow = destWidth * bytesPerPixel
+        let destData = UnsafeMutablePointer<UInt8>.allocate(capacity: destHeight * destBytesPerRow)
+        defer { destData.deallocate() }
+        var destBuffer = vImage_Buffer(data: destData, height: vImagePixelCount(destHeight),
+                                       width: vImagePixelCount(destWidth), rowBytes: destBytesPerRow)
+
+        error = vImageScale_ARGB8888(&sourceBuffer, &destBuffer, nil, vImage_Flags(kvImageHighQualityResampling))
+        guard error == kvImageNoError else { return nil }
+
+        let resizedImage = vImageCreateCGImageFromBuffer(&destBuffer, &format, nil, nil, vImage_Flags(kvImageNoFlags), &error)
+        return resizedImage?.takeRetainedValue()
+    }
     
-
     private func takeScreenshot() {
-//        print("Taking screenshot")
-//        print("List of apps in app folder")
-//        print(enumerateAllApps())
         let displayID = CGMainDisplayID()
         let screenFrame = CGDisplayBounds(displayID)
         guard let image = CGWindowListCreateImage(screenFrame, .optionOnScreenOnly, kCGNullWindowID, .bestResolution) else { return }
 
-       // Perform OCR on the captured image
-       ocrQueue.async { [weak self] in
-           self?.performOCR(on: image)
-       }
+        // Your OCR operation remains unchanged
+        ocrQueue.async { [weak self] in
+            self?.performOCR(on: image)
+        }
         
+        let resizedWidth = 980
+        let resizedHeight = 632
+        guard let resizedImage = resizeImage(image, toWidth: resizedWidth, andHeight: resizedHeight) else { return }
+
         let timestamp = Date()
 
         guard let destinationUrl = getDestinationUrl() else { return }
-        guard let destination = CGImageDestinationCreateWithURL(destinationUrl as CFURL, UTType.png.identifier as CFString, 1, nil) else { return }
-        CGImageDestinationAddImage(destination, image, nil)
+        let jpgDestinationUrl = destinationUrl.deletingPathExtension().appendingPathExtension("jpg")
+        guard let destination = CGImageDestinationCreateWithURL(jpgDestinationUrl as CFURL, UTType.jpeg.identifier as CFString, 1, nil) else { return }
+        
+        // Compression Quality Option
+        let options: [CFString: Any] = [kCGImageDestinationLossyCompressionQuality: 0.7] // Adjust the compression quality (0.0 to 1.0)
+        CGImageDestinationAddImage(destination, resizedImage, options as CFDictionary) // Use resizedImage here
         CGImageDestinationFinalize(destination)
 
         // Log the file path
         let newScreenshot = Screenshot(context: viewContext)
         newScreenshot.timestamp = timestamp
-        newScreenshot.filepath = destinationUrl.path
+        newScreenshot.filepath = jpgDestinationUrl.path
         do {
             try viewContext.save()
-            print("Screenshot info saved: \(destinationUrl.path)")
+            print("Screenshot info saved: \(jpgDestinationUrl.path)")
         } catch {
             print("Failed to save screenshot info: \(error)")
         }
     }
+
+    
+//    private func takeScreenshot() {
+////        print("Taking screenshot")
+////        print("List of apps in app folder")
+////        print(enumerateAllApps())
+//        let displayID = CGMainDisplayID()
+//        let screenFrame = CGDisplayBounds(displayID)
+//        guard let image = CGWindowListCreateImage(screenFrame, .optionOnScreenOnly, kCGNullWindowID, .bestResolution) else { return }
+//
+//       // Perform OCR on the captured image
+//       ocrQueue.async { [weak self] in
+//           self?.performOCR(on: image)
+//       }
+//
+//        let timestamp = Date()
+//
+//        guard let destinationUrl = getDestinationUrl() else { return }
+//        guard let destination = CGImageDestinationCreateWithURL(destinationUrl as CFURL, UTType.png.identifier as CFString, 1, nil) else { return }
+//        CGImageDestinationAddImage(destination, image, nil)
+//        CGImageDestinationFinalize(destination)
+//
+//        // Log the file path
+//        let newScreenshot = Screenshot(context: viewContext)
+//        newScreenshot.timestamp = timestamp
+//        newScreenshot.filepath = destinationUrl.path
+//        do {
+//            try viewContext.save()
+//            print("Screenshot info saved: \(destinationUrl.path)")
+//        } catch {
+//            print("Failed to save screenshot info: \(error)")
+//        }
+//    }
 //    zzzzzzzzzzzzz
     
 
@@ -167,14 +228,9 @@ class ScreenshotManager {
                
                if recognizedStrings.contains("ycombinator.com") {
                    DispatchQueue.main.async {
-                       NotificationManager.shared.showNotification()
+                       PopperView.shared.showNotification()
                    }
                }
-               
-           
-
-
-
                
                // Regular expression pattern for URLs with or without schemes
                let urlPattern = "(https?://)?[a-zA-Z0-9.-]+\\.(com|net|org|edu|gov|mil|co|info|io|biz|us|uk|ca|au|de|fr|es|it|ru|jp|cn|in|[a-zA-Z]{2})(?:/[^\\s]*)?(?:\\b|\\s|$)"

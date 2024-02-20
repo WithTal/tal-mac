@@ -18,10 +18,10 @@ struct ContentView: View {
 
     // Screenshot Manager
     
-    private var appMonitor = ApplicationMonitor() // Add this line
+    private var appMonitor = ApplicationController() // Add this line
     
 
-    private var screenshotManager = ScreenshotManager()
+    private var screenshotManager = ScreenshotController()
 
     let context = PersistenceController.shared.container.viewContext
     
@@ -29,6 +29,8 @@ struct ContentView: View {
     
     // State to control screenshot taking
     @State private var isTakingScreenshots = false
+    @State private var timer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
+
 
     var body: some View {
 //        VStack{
@@ -45,8 +47,8 @@ struct ContentView: View {
                         let appsChartData = convertToCircleChartData(appDurations: appsModel.timeSpentPerApp)
                         let websiteChartData = convertToCircleChartData(appDurations: websitesModel.totalDurationsByDomain)
                         
-                        ExperimentalView(websitesData: websiteChartData, appsData: appsChartData)
-                        VistanteGridView(viewModel: appsModel, websiteViewModel: websitesModel)
+                        ConsumptionView(websitesData: websiteChartData, appsData: appsChartData)
+                        LowerConsumptionView(viewModel: appsModel, websiteViewModel: websitesModel)
                     }
                     .padding([.leading, .trailing], 20)
                 }
@@ -75,13 +77,19 @@ struct ContentView: View {
                 .padding(.trailing, 20)
                 .padding(.top, 20)
                 .zIndex(1) // Ensures the logo is above the ScrollView
+                
+                
+                
+//                .buttonStyle(FilledButton()) // Assuming you have a FilledButton style defined
+//                .position(x: UIScreen.main.bounds.width / 2, y: 30) // Position your button, or use a different layout
 
-                
-                
-                
-                
-//            }
             }
+            .onReceive(timer) { _ in
+                self.appsModel.fetchApps()
+                self.websitesModel.fetchWebsites() // Assuming you have a similar method in WebsitesModel
+            }
+
+        
         
     }
 

@@ -1,15 +1,15 @@
 //
-//  AppTracking.swift
+//  ApplicationController.swift
 //  Tal
 //
-//  Created by Pablo Hansen on 2/15/24.
+//  Created by Pablo Hansen on 2/20/24.
 //
 
 import Foundation
 import Cocoa
 import CoreData
 
-class ApplicationMonitor {
+class ApplicationController {
     var viewContext: NSManagedObjectContext = PersistenceController.shared.container.viewContext
 
     init() {
@@ -32,7 +32,7 @@ class ApplicationMonitor {
     
 
 
-        print("hbundle app: \(bundleIdentifier)")
+//        print("hbundle app: \(bundleIdentifier)")
         addVisit(name: appName, type: "app", context: viewContext, bundleId: bundleIdentifier)
         
         if appName != "Google Chrome"{

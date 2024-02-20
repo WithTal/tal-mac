@@ -1,12 +1,9 @@
 //
-//  WebsiteView.swift
+//  WebsiteModel.swift
 //  Tal
 //
-//  Created by Pablo Hansen on 2/16/24.
+//  Created by Pablo Hansen on 2/20/24.
 //
-
-import Foundation
-
 
 import Foundation
 import CoreData
@@ -38,9 +35,9 @@ class WebsitesModel: ObservableObject {
 
         do {
             visitantesToday = try context.fetch(request)
-            print("V")
-            print(visitantesToday)
-            print("K")
+//            print("V")
+//            print(visitantesToday)
+//            print("K")
             calculateTotalDurations()
         } catch {
             print("Error fetching data: \(error)")
@@ -77,7 +74,7 @@ class WebsitesModel: ObservableObject {
         }
 
         guard let url = URL(string: formattedURLString), let domain = url.host else {
-            print("Invalid URL: \(formattedURLString)")
+//            print("Invalid URL: \(formattedURLString)")
             return "Unknown"
         }
 

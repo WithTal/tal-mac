@@ -1,8 +1,8 @@
 //
-//  NicePopup.swift
+//  PopperView.swift
 //  Tal
 //
-//  Created by Pablo Hansen on 2/19/24.
+//  Created by Pablo Hansen on 2/20/24.
 //
 
 import Foundation
@@ -13,7 +13,7 @@ import Cocoa
 
 class PopperView {
     private var notificationWindow: NSWindow?
-    static let shared = NotificationManager()
+    static let shared = PopperView()
 
     private var rumbleTimer: Timer?
 
@@ -180,7 +180,7 @@ struct NotificationView: View {
                 .cornerRadius(10)
 
             Button("Close", action: {
-                NotificationManager.shared.hideNotification()
+                PopperView.shared.hideNotification()
             })
             .padding()
             .background(Color.red)

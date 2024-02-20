@@ -1,15 +1,13 @@
 //
-//  Apps.swift
+//  AppsModel.swift
 //  Tal
 //
-//  Created by Pablo Hansen on 2/17/24.
+//  Created by Pablo Hansen on 2/20/24.
 //
 
-import Foundation
 import AppKit
 import SwiftUI
 import CoreData
-
 import Foundation
 import CoreData
 
@@ -44,7 +42,7 @@ class AppsModel: ObservableObject {
         } catch {
             print("Error fetching data: \(error)")
         }
-        print(timeSpentPerApp)
+        
     }
 
     func calculateDurations() {

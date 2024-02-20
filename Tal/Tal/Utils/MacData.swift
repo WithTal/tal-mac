@@ -20,19 +20,22 @@ func iconForBundleIdentifier(_ bundleIdentifier: String) -> NSImage {
 func convertToCircleChartData(appDurations: [String: TimeInterval]) -> [CircleChartData] {
     // Define a vibrant color palette
     let colors: [Color] = [
-        Color(red: 0xC1 / 255, green: 0x49 / 255, blue: 0x53 / 255),
-        Color(red: 0x27 / 255, green: 0x9A / 255, blue: 0xF1 / 255),
-        Color(red: 0x15 / 255, green: 0x7A / 255, blue: 0x6E / 255),
+        // Vibrant Red
+        Color(red: 0xE3 / 255, green: 0x4A / 255, blue: 0x36 / 255),
+        // Bright Blue
+        Color(red: 0x33 / 255, green: 0xB8 / 255, blue: 0xF9 / 255),
+        // Soft Green (less vibrant)
+        Color(red: 0x50 / 255, green: 0xC8 / 255, blue: 0x88 / 255),
 
-//        Color(hue: 0.2, saturation: 0.5, brightness: 1.0), // Light Red
-        Color(hue: 0.4, saturation: 0.5, brightness: 1.0), // Light Green
-        Color(hue: 0.55, saturation: 0.5, brightness: 1.0), // Light Blue
-        Color(hue: 0.12, saturation: 0.5, brightness: 1.0), // Light Yellow
-        Color(hue: 0.75, saturation: 0.5, brightness: 1.0), // Light Purple
-        Color(hue: 0.88, saturation: 0.5, brightness: 1.0), // Light Pink
-        Color(hue: 0.08, saturation: 0.5, brightness: 1.0), // Light Orange
-        // Removed Light Gray to have exactly 8 colors
+        // Vivid colors using Hue, Saturation, Brightness model
+        Color(hue: 0.0, saturation: 0.8, brightness: 1.0),  // Vivid Red
+        Color(hue: 0.15, saturation: 0.8, brightness: 1.0), // Warm Yellow
+        Color(hue: 0.55, saturation: 0.8, brightness: 1.0), // Vivid Blue
+        Color(hue: 0.7, saturation: 0.8, brightness: 1.0),  // Vivid Cyan
+        Color(hue: 0.8, saturation: 0.8, brightness: 1.0),  // Vivid Purple
+        Color(hue: 0.05, saturation: 0.8, brightness: 1.0), // Vivid Orange
     ]
+
 
     var chartData: [CircleChartData] = []
 
@@ -50,3 +53,26 @@ func convertToCircleChartData(appDurations: [String: TimeInterval]) -> [CircleCh
     return chartData
 }
 
+
+
+
+func addVisit(name: String, type: String, context: NSManagedObjectContext, bundleId: String? = nil, timestamp: Date? = nil) {
+    let visit = Vistante(context: context)
+    
+    // Use the provided timestamp if available; otherwise, use the current time
+    visit.timestamp = timestamp ?? Date()
+    visit.visitype = type
+    visit.type = name
+    visit.bundleId = bundleId
+//    print(visit)
+    
+    do {
+        try context.save()
+        print("Saved \(name)")
+        } catch {
+            // Handle the error appropriately
+            print("Error saving context: \(error)")
+        }
+    
+    
+}
