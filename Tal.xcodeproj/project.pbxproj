@@ -33,7 +33,6 @@
 		98EA4F282B7C489B00C83C8B /* TalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA4F272B7C489B00C83C8B /* TalUITestsLaunchTests.swift */; };
 		98F3BFD22B7EE33D007572DF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BFD12B7EE33D007572DF /* SettingsView.swift */; };
 		98F3BFD52B7EF53E007572DF /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 98F3BFD42B7EF53E007572DF /* KeyboardShortcuts */; };
-		98F3BFD92B7F01EF007572DF /* AppTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BFD82B7F01EF007572DF /* AppTracking.swift */; };
 		98F3BFDC2B7F0371007572DF /* PrivacySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BFDB2B7F0371007572DF /* PrivacySettings.swift */; };
 		98F3BFE02B7F0470007572DF /* StorageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BFDF2B7F0470007572DF /* StorageSettings.swift */; };
 		98F3BFE22B7F047F007572DF /* ShortcutSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3BFE12B7F047F007572DF /* ShortcutSettings.swift */; };
@@ -87,7 +86,6 @@
 		98EA4F252B7C489B00C83C8B /* TalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalUITests.swift; sourceTree = "<group>"; };
 		98EA4F272B7C489B00C83C8B /* TalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		98F3BFD12B7EE33D007572DF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		98F3BFD82B7F01EF007572DF /* AppTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTracking.swift; sourceTree = "<group>"; };
 		98F3BFDB2B7F0371007572DF /* PrivacySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySettings.swift; sourceTree = "<group>"; };
 		98F3BFDF2B7F0470007572DF /* StorageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageSettings.swift; sourceTree = "<group>"; };
 		98F3BFE12B7F047F007572DF /* ShortcutSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutSettings.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 		987BCA412B856D33001EC934 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				98F3BFD82B7F01EF007572DF /* AppTracking.swift */,
 				987BCA422B856D5A001EC934 /* ScreenshotController.swift */,
 				987BCA442B856DAA001EC934 /* ApplicationController.swift */,
 			);
@@ -397,7 +394,6 @@
 				98782AA32B82D23000E187F0 /* Screenshot+CoreDataClass.swift in Sources */,
 				98F3BFE02B7F0470007572DF /* StorageSettings.swift in Sources */,
 				98782A962B81C3F500E187F0 /* CircleChart.swift in Sources */,
-				98F3BFD92B7F01EF007572DF /* AppTracking.swift in Sources */,
 				98782A992B81C89800E187F0 /* Time.swift in Sources */,
 				98B87EA92B7F18C5003B7B34 /* Vistante+CoreDataClass.swift in Sources */,
 				98B87EB52B804B8F003B7B34 /* MacData.swift in Sources */,

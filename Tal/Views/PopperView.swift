@@ -20,11 +20,22 @@ class PopperView {
 
     var onColorChange: ((Color) -> Void)?
 
-        // ... existing code ...
 
-        public func changeLogoColor(to color: Color) {
-            onColorChange?(color)
-        }
+
+    public func changeLogoColor(to color: Color) {
+        onColorChange?(color)
+}
+    public func darken() {
+        // Get the current red, green, and blue components of the current color
+
+//        let newRed = min(self.NotificationView.logoColor.red + 0.1, 1.0)
+        
+//        changeLogoColor(to: Color(red: newRed,blue: self.NotificationView.logoColor.blue,green: self.NotificationView.logoColor.green ))
+
+        
+        
+    }
+
     
     
     private init() {} // Private initializer to restrict instantiation
@@ -200,7 +211,7 @@ class PopperView {
 
 
 struct NotificationView: View {
-    @State private var logoColor: Color = .black
+    @State public var logoColor: Color = .black
     
     var body: some View {
         VStack {

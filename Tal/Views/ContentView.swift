@@ -44,29 +44,29 @@ struct ContentView: View {
                     
                     VStack {
                         
-                        Button(action: PopperView.shared.showNotification) {
-                            Text("SHOW POPPER")
-
-                        }
-                        Button(action: PopperView.shared.showNotification) {
-                            Text("SHOW POPPER")
-
-                        }
-                        .padding(.top, 20)
-                        .zIndex(1)
-                        
-                        Button(action: PopperView.shared.hideNotification) {
-                            Text("HIDE POPPER")
-                        }
-                        .padding(.top, 20)
-                        .zIndex(1)
-                        Button(action: { PopperView.shared.changeLogoColor(to: .red) }) {
-
-//                        Button(action: PopperView.shared.changeLogoColor(to: .red)) {
-                            Text("Change color")
-                        }
-                        .padding(.top, 20)
-                        .zIndex(1)
+//                        Button(action: PopperView.shared.showNotification) {
+//                            Text("SHOW POPPER")
+//
+//                        }
+//                        Button(action: PopperView.shared.showNotification) {
+//                            Text("SHOW POPPER")
+//
+//                        }
+//                        .padding(.top, 20)
+//                        .zIndex(1)
+//
+//                        Button(action: PopperView.shared.hideNotification) {
+//                            Text("HIDE POPPER")
+//                        }
+//                        .padding(.top, 20)
+//                        .zIndex(1)
+//                        Button(action: { PopperView.shared.changeLogoColor(to: .red) }) {
+//
+////                        Button(action: PopperView.shared.changeLogoColor(to: .red)) {
+//                            Text("Change color")
+//                        }
+//                        .padding(.top, 20)
+//                        .zIndex(1)
                         Spacer().frame(height: 60) // Space for the button, adjust as needed
                         
                         let appsChartData = convertToCircleChartData(appDurations: appsModel.timeSpentPerApp)
