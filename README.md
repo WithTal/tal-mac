@@ -1,4 +1,4 @@
-# Tal for iOS
+# Tal for Mac
 
 ## About
 
