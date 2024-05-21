@@ -30,8 +30,6 @@ class ApplicationController {
         
         let bundleIdentifier = app.bundleIdentifier
     
-
-
 //        print("hbundle app: \(bundleIdentifier)")
         addVisit(name: appName, type: "app", context: viewContext, bundleId: bundleIdentifier)
         
